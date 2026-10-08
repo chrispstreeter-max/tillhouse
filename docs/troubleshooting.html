@@ -1,0 +1,141 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Troubleshooting — Tillhouse documentation</title><link rel="icon" href="../assets/tillhouse-favicon-32.png">
+<style>
+:root { --ink:#151412; --paper:#F4EFE6; --red:#D9432B; --stone:#E4DCCD; --muted:#5E5850; --line:rgba(21,20,18,.14); }
+* { box-sizing:border-box; } [hidden] { display:none !important; }
+a { color:inherit; } .layout > * { min-width:0; } main { overflow-wrap:anywhere; } main img { max-width:100%; }
+body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 Inter, system-ui, sans-serif; }
+@font-face { font-family: Archivo; src: url(../assets/Archivo-Variable.ttf); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: Inter; src: url(../assets/Inter-Variable.ttf); font-weight: 100 900; }
+.top { display:flex; align-items:center; justify-content:space-between; gap:16px; width:min(1100px,100% - 32px); margin:0 auto; padding:18px 0; }
+.top img { height:30px; width:auto; display:block; }
+.top nav { display:flex; gap:18px; font-weight:600; font-size:15px; } .top nav a { text-decoration:none; }
+.layout { display:grid; grid-template-columns:230px minmax(0,1fr); gap:48px; width:min(1100px,100% - 32px); margin:0 auto; padding:24px 0 72px; }
+.side { position:sticky; top:16px; align-self:start; font-size:15px; } .side ul { list-style:none; margin:0; padding:0; display:grid; gap:4px; }
+.side a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; } .side a[aria-current] { background:var(--stone); font-weight:700; }
+main h1 { font:800 clamp(32px,4.4vw,52px)/1 Archivo, sans-serif; font-stretch:125%; letter-spacing:-.03em; margin:0 0 24px; }
+main h2 { font:800 26px/1.15 Archivo, sans-serif; font-stretch:112%; margin:40px 0 12px; } main h3 { font-size:19px; margin:28px 0 8px; }
+main a { color:inherit; } main code { background:#fff; padding:1px 6px; border-radius:5px; font-size:.92em; }
+main table { width:100%; border-collapse:collapse; font-size:15px; margin:16px 0; display:block; overflow-x:auto; }
+main th, main td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+main blockquote { margin:16px 0; padding:12px 16px; background:#fff; border-left:3px solid var(--red); border-radius:6px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; list-style:none; padding:0; }
+.cards a { display:block; height:100%; background:#fff; border-radius:12px; padding:16px 18px; text-decoration:none; box-shadow:0 0 0 1px var(--line); font-weight:700; }
+form { display:grid; gap:16px; max-width:640px; background:#fff; padding:24px; border-radius:14px; box-shadow:0 0 0 1px var(--line); }
+.row { display:grid; grid-template-columns:1fr 1fr; gap:16px; } label { display:grid; gap:6px; min-width:0; font-weight:600; font-size:15px; }
+input, textarea { width:100%; min-width:0; font:inherit; padding:10px 12px; border:1px solid #bdb5a8; border-radius:8px; background:#fff; }
+input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visible { outline:3px solid var(--red); outline-offset:2px; }
+small { color:var(--muted); font-weight:400; }
+button { font:700 16px Inter, sans-serif; min-height:48px; padding:0 22px; border:0; border-radius:999px; background:var(--ink); color:var(--paper); cursor:pointer; justify-self:start; }
+.note { background:var(--stone); border-radius:10px; padding:12px 14px; font-size:15px; }
+@media (max-width:820px) { .layout { grid-template-columns:1fr; gap:16px; } .side { position:static; } .side ul { display:flex; flex-wrap:wrap; } .row { grid-template-columns:1fr; } .top nav { display:none; } }
+</style></head><body>
+<header class="top"><a href="../index.html"><img src="../assets/tillhouse-lockup.svg" alt="Tillhouse"></a>
+<nav aria-label="Site"><a href="../docs/index.html">Docs</a><a href="../docs/faq.html">FAQ</a><a href="../support.html">Support</a></nav></header>
+<div class="layout"><nav class="side" aria-label="Documentation"><ul>
+    <li><a href="../docs/index.html">All guides</a></li>
+    <li><a href="../docs/quick-start.html">Quick start</a></li><li><a href="../docs/setup-checklist.html">Setup checklist</a></li><li><a href="../docs/styles.html">Styles</a></li><li><a href="../docs/theme-guide.html">Complete theme guide</a></li><li><a href="../docs/theme-editor.html">Theme editor</a></li><li><a href="../docs/product-page.html">Product page</a></li><li><a href="../docs/design-system.html">Design system</a></li><li><a href="../docs/promotions.html">Promotions</a></li><li><a href="../docs/bundle-builder.html">Bundle builder</a></li><li><a href="../docs/trade-portal.html">Trade portal</a></li><li><a href="../docs/features.html">Feature list</a></li><li><a href="../docs/troubleshooting.html" aria-current="page">Troubleshooting</a></li><li><a href="../docs/release-notes.html">Release notes</a></li>
+    <li><a href="../docs/faq.html">FAQ</a></li>
+    <li><a href="../support.html">Support</a></li></ul></nav><main><h1>Troubleshooting</h1>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Cause and fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>An offer, badge or banner doesn&#39;t appear for customers</td>
+<td>The offer isn&#39;t <strong>enabled + confirmed</strong>, is outside its dates, or the product doesn&#39;t match <em>Applies to</em>. In the editor, unconfirmed offers show with a dashed outline and “Preview – not live”.</td>
+</tr>
+<tr>
+<td>The discount isn&#39;t applied at checkout</td>
+<td>The theme doesn&#39;t create discounts. Create or fix it in <strong>Shopify admin › Discounts</strong> and make its eligibility match the offer.</td>
+</tr>
+<tr>
+<td>Free shipping bar missing</td>
+<td>Enable it and tick <em>Free shipping above this amount is set up in Shopify shipping settings</em> (Promotions &amp; merchandising), and add a <em>Progress bar</em> block to the cart drawer. It appears once the cart has items.</td>
+</tr>
+<tr>
+<td>Campaign bar not showing</td>
+<td>Campaign mode must be enabled, inside its dates, and — if linked — its offer must be live. Preview with <em>Preview / demo states › Campaign: active</em>.</td>
+</tr>
+<tr>
+<td>Mega menu doesn&#39;t open</td>
+<td>The Mega menu block&#39;s <em>Menu item</em> must match a top-level menu item&#39;s title exactly (not case-sensitive).</td>
+</tr>
+<tr>
+<td>A product block doesn&#39;t show</td>
+<td>Blocks with nothing to show render nothing — e.g. Rating without reviews, Size guide without a guide, FAQ without content, Subtitle without the metafield. Add the content or connect the metafield.</td>
+</tr>
+<tr>
+<td>Size selector or Colour selector shows nothing</td>
+<td>Its <em>Options to show</em> must match your option names (e.g. <code>Size</code>, <code>Colour</code> or <code>Color</code>). Leave it empty to show all options.</td>
+</tr>
+<tr>
+<td>Gallery is on the wrong side</td>
+<td>Product information › <em>Gallery position</em> and <em>Column widths</em>.</td>
+</tr>
+<tr>
+<td>A block is missing on phones or desktop</td>
+<td>Check the block&#39;s <em>Show on desktop / tablet / mobile</em> and any Group conditions it sits in.</td>
+</tr>
+<tr>
+<td>Search shows nothing before typing</td>
+<td>Add popular searches, a quick-links menu or a featured collection in <em>Theme settings › Search</em>; empty parts are hidden.</td>
+</tr>
+<tr>
+<td>Offer tile or Promotion block not visible</td>
+<td>The offer must be live (enabled, confirmed, inside its dates). An offer limited to one collection only shows on that collection.</td>
+</tr>
+<tr>
+<td>No filters on collections</td>
+<td>Install <strong>Shopify Search &amp; Discovery</strong> and add filters; enable <em>filtering</em> in the Collection grid section.</td>
+</tr>
+<tr>
+<td>Colour swatches show as text</td>
+<td>Set the product category and link the <em>Color</em> option to category values; for filters set presentation to <em>Swatch</em> in Search &amp; Discovery.</td>
+</tr>
+<tr>
+<td>Low stock badge never appears</td>
+<td>Variant must track quantity with <em>Continue selling when out of stock</em> off, and stock must be at or below the threshold.</td>
+</tr>
+<tr>
+<td>Stars/ratings missing</td>
+<td>Install a review app that writes <code>reviews.rating</code> and <code>reviews.rating_count</code>, and add its app block to <em>Product reviews</em>.</td>
+</tr>
+<tr>
+<td>Complementary products / “Bought together” empty</td>
+<td>Configure complementary products in Search &amp; Discovery.</td>
+</tr>
+<tr>
+<td>Discount code field says the code couldn&#39;t be applied</td>
+<td>The code doesn&#39;t exist, has expired or its requirements aren&#39;t met; Shopify decides. Codes can always be entered at checkout.</td>
+</tr>
+<tr>
+<td>Gift wrap does nothing</td>
+<td>Choose a gift wrap product in the block; it must be published to the Online Store sales channel.</td>
+</tr>
+<tr>
+<td>Placeholder artwork on the live store</td>
+<td>An image setting is empty. Choose an image, or turn off <em>Theme settings › Placeholder artwork</em> to use Shopify&#39;s plain placeholders.</td>
+</tr>
+<tr>
+<td>Product grid missing on the storefront</td>
+<td>Grids without a collection (or with an empty collection) are hidden from customers and shown as placeholders in the editor only. Choose a collection with products.</td>
+</tr>
+<tr>
+<td>Sections appear/disappear unexpectedly</td>
+<td>Check the section&#39;s <em>Scheduling</em>, <em>Device visibility</em> and <em>Conditions</em>.</td>
+</tr>
+<tr>
+<td>Animations feel slow or distracting</td>
+<td><em>Theme settings › Animation</em>, or set a section&#39;s animation to <em>None</em>. Visitors who prefer reduced motion never see animation.</td>
+</tr>
+<tr>
+<td>Editor shows “translation missing”</td>
+<td>Check the store&#39;s language settings; the theme ships English and French. Edit texts in <em>Online Store › Themes › … › Edit default theme content</em>.</td>
+</tr>
+</tbody></table>
+<p>Still stuck? Contact support via <a href="https://chrisps.ca">https://chrisps.ca</a> with your store URL, theme version (6.0.1), the page URL and what you expected to happen.</p>
+</main></div></body></html>

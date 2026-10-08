@@ -1,0 +1,148 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feature list — Tillhouse documentation</title><link rel="icon" href="../assets/tillhouse-favicon-32.png">
+<style>
+:root { --ink:#151412; --paper:#F4EFE6; --red:#D9432B; --stone:#E4DCCD; --muted:#5E5850; --line:rgba(21,20,18,.14); }
+* { box-sizing:border-box; } [hidden] { display:none !important; }
+a { color:inherit; } .layout > * { min-width:0; } main { overflow-wrap:anywhere; } main img { max-width:100%; }
+body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 Inter, system-ui, sans-serif; }
+@font-face { font-family: Archivo; src: url(../assets/Archivo-Variable.ttf); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: Inter; src: url(../assets/Inter-Variable.ttf); font-weight: 100 900; }
+.top { display:flex; align-items:center; justify-content:space-between; gap:16px; width:min(1100px,100% - 32px); margin:0 auto; padding:18px 0; }
+.top img { height:30px; width:auto; display:block; }
+.top nav { display:flex; gap:18px; font-weight:600; font-size:15px; } .top nav a { text-decoration:none; }
+.layout { display:grid; grid-template-columns:230px minmax(0,1fr); gap:48px; width:min(1100px,100% - 32px); margin:0 auto; padding:24px 0 72px; }
+.side { position:sticky; top:16px; align-self:start; font-size:15px; } .side ul { list-style:none; margin:0; padding:0; display:grid; gap:4px; }
+.side a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; } .side a[aria-current] { background:var(--stone); font-weight:700; }
+main h1 { font:800 clamp(32px,4.4vw,52px)/1 Archivo, sans-serif; font-stretch:125%; letter-spacing:-.03em; margin:0 0 24px; }
+main h2 { font:800 26px/1.15 Archivo, sans-serif; font-stretch:112%; margin:40px 0 12px; } main h3 { font-size:19px; margin:28px 0 8px; }
+main a { color:inherit; } main code { background:#fff; padding:1px 6px; border-radius:5px; font-size:.92em; }
+main table { width:100%; border-collapse:collapse; font-size:15px; margin:16px 0; display:block; overflow-x:auto; }
+main th, main td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+main blockquote { margin:16px 0; padding:12px 16px; background:#fff; border-left:3px solid var(--red); border-radius:6px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; list-style:none; padding:0; }
+.cards a { display:block; height:100%; background:#fff; border-radius:12px; padding:16px 18px; text-decoration:none; box-shadow:0 0 0 1px var(--line); font-weight:700; }
+form { display:grid; gap:16px; max-width:640px; background:#fff; padding:24px; border-radius:14px; box-shadow:0 0 0 1px var(--line); }
+.row { display:grid; grid-template-columns:1fr 1fr; gap:16px; } label { display:grid; gap:6px; min-width:0; font-weight:600; font-size:15px; }
+input, textarea { width:100%; min-width:0; font:inherit; padding:10px 12px; border:1px solid #bdb5a8; border-radius:8px; background:#fff; }
+input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visible { outline:3px solid var(--red); outline-offset:2px; }
+small { color:var(--muted); font-weight:400; }
+button { font:700 16px Inter, sans-serif; min-height:48px; padding:0 22px; border:0; border-radius:999px; background:var(--ink); color:var(--paper); cursor:pointer; justify-self:start; }
+.note { background:var(--stone); border-radius:10px; padding:12px 14px; font-size:15px; }
+@media (max-width:820px) { .layout { grid-template-columns:1fr; gap:16px; } .side { position:static; } .side ul { display:flex; flex-wrap:wrap; } .row { grid-template-columns:1fr; } .top nav { display:none; } }
+</style></head><body>
+<header class="top"><a href="../index.html"><img src="../assets/tillhouse-lockup.svg" alt="Tillhouse"></a>
+<nav aria-label="Site"><a href="../docs/index.html">Docs</a><a href="../docs/faq.html">FAQ</a><a href="../support.html">Support</a></nav></header>
+<div class="layout"><nav class="side" aria-label="Documentation"><ul>
+    <li><a href="../docs/index.html">All guides</a></li>
+    <li><a href="../docs/quick-start.html">Quick start</a></li><li><a href="../docs/setup-checklist.html">Setup checklist</a></li><li><a href="../docs/styles.html">Styles</a></li><li><a href="../docs/theme-guide.html">Complete theme guide</a></li><li><a href="../docs/theme-editor.html">Theme editor</a></li><li><a href="../docs/product-page.html">Product page</a></li><li><a href="../docs/design-system.html">Design system</a></li><li><a href="../docs/promotions.html">Promotions</a></li><li><a href="../docs/bundle-builder.html">Bundle builder</a></li><li><a href="../docs/trade-portal.html">Trade portal</a></li><li><a href="../docs/features.html" aria-current="page">Feature list</a></li><li><a href="../docs/troubleshooting.html">Troubleshooting</a></li><li><a href="../docs/release-notes.html">Release notes</a></li>
+    <li><a href="../docs/faq.html">FAQ</a></li>
+    <li><a href="../support.html">Support</a></li></ul></nav><main><h1>Theme Feature List</h1>
+<p>Tillhouse by CHRISPSDesign — a modular, premium Shopify Online Store 2.0 theme.</p>
+<h2>Visual building</h2>
+<ul>
+<li>Sections and blocks you add, remove, reorder, duplicate and hide in Shopify&#39;s Theme Editor</li>
+<li>Design section: a blank canvas of nestable blocks with per-device columns, direction, alignment, gap and padding</li>
+<li>Sections and blocks grouped by purpose: Layout, Commerce, Media, Content, Marketing, Social proof, Storytelling, Navigation, Product page</li>
+<li>Show / hide every section and block on desktop, tablet and mobile</li>
+<li>Scheduling and conditions: dates, customer status, country, cart value, product tags, collections, product stock and sale state, Campaign mode</li>
+<li>Dynamic sources and metafields across product blocks</li>
+<li>App blocks and app embeds</li>
+</ul>
+<h2>Design system</h2>
+<ul>
+<li>8 demo theme styles: Fashion, Beauty, Streetwear, Electronics, Home &amp; Living, Luxury, Food &amp; Beverage, General Retail</li>
+<li>10 style directions that recompose key sections: Luxury, Fashion, Beauty, Streetwear, Electronics &amp; tech, Home &amp; living, Food &amp; beverage, General retail, Editorial, Minimal</li>
+<li>Colour schemes with sale, success and warning colours; contrast checks in the editor</li>
+<li>Typography for display, H1–H4, body, small, caption, button and navigation: font, size, weight, line height, letter spacing, capitalisation</li>
+<li>Buttons, cards, forms, spacing, borders, radius, images, icons and animation settings</li>
+<li>Reduced-motion support throughout</li>
+</ul>
+<h2>Header and navigation</h2>
+<ul>
+<li>Header layouts: Standard, Inline, Editorial, Minimal, Campaign</li>
+<li>Visual mega menus: feature images, products, promotion panel or collection tiles</li>
+<li>Sticky header (always or on scroll up), transparent header over the home page</li>
+<li>Mobile drill-down menu drawer with account, country/language and social links</li>
+<li>Announcement bar with rotating messages and offer announcements</li>
+</ul>
+<h2>Search</h2>
+<ul>
+<li>Search opens as a panel, side drawer or full screen</li>
+<li>Popular searches, quick-links menu and featured products before typing</li>
+<li>Predictive search: suggestions, products, collections, pages and articles</li>
+<li>Search results page with filters and sorting</li>
+</ul>
+<h2>Home page and content</h2>
+<ul>
+<li>Slideshow, Hero (editorial, split, full-width, video, promotion), Promotional banner, Promotion tiles</li>
+<li>Product grid (grid, carousel, editorial), Featured product, Collection list (grid, mosaic)</li>
+<li>Image with text, Video, Lookbook with hotspots, Testimonials and press logos, Blog posts, Newsletter, Scrolling text</li>
+<li>Before / after comparison (section and block)</li>
+<li>Storytelling presets: Product story, Video with text, Full-width media, Features, Materials &amp; care, Specifications, Testimonial, Before / after story</li>
+</ul>
+<h2>Product pages</h2>
+<ul>
+<li>Two-column layout with gallery left or right, column widths 40/60 to 65/35 or custom</li>
+<li>Scrolling: auto, sticky information, sticky gallery or normal; tablet stacked or two columns</li>
+<li>Gallery: thumbnails (left, right, below), slider, grid, stacked, masonry; zoom, lightbox, video, 3D</li>
+<li>30+ draggable product blocks including breadcrumbs, subtitle, rating with breakdown, price with savings, stock, variant pickers (buttons, pills, dropdown, swatches; separate size and colour selectors), quantity, buy buttons, Buy it now, payment messaging, delivery estimate with postcode check, pickup, offers, multi-buy, size guide, accordions, tabs, specifications, Complete the look, recommended products, sibling products, share and sticky add to cart</li>
+<li>Optional product sidebar with shop links, filters, offers and adverts</li>
+<li>Four product templates: default, editorial, minimal, sale</li>
+</ul>
+<h2>Collections</h2>
+<ul>
+<li>Collection banner (text, split, overlay) with quick links</li>
+<li>Filters (Shopify Search &amp; Discovery) in a sidebar or drawer, sorting, density switcher, pagination</li>
+<li>Editorial grid tiles: image, text, product, video and offer tiles with per-device widths and heights</li>
+<li>Four collection templates: default, editorial, large image, sale</li>
+</ul>
+<h2>Product cards</h2>
+<ul>
+<li>Hover image, badges, rating, colour swatches, vendor or subtitle</li>
+<li>Quick add and quick view</li>
+</ul>
+<h2>Cart</h2>
+<ul>
+<li>Cart drawer or cart page</li>
+<li>Progress bars (free shipping, free gift, spend tiers, milestones), promotion messages, offer reminders</li>
+<li>Upsells, discount codes, gift wrap, gift message, terms checkbox, app blocks</li>
+</ul>
+<h2>Promotions and badges</h2>
+<ul>
+<li>Six offers: BOGO, buy X get Y, buy more save %, multi-buy price, spend thresholds, free shipping, free gift, sale, custom</li>
+<li>Offers only appear after you confirm the Shopify discount exists — never misleading customers</li>
+<li>Promotion block, offer tiles, promotional banners, cart reminders, offer badges</li>
+<li>Campaign mode: scheduled store-wide campaigns with bar, colours and badge</li>
+<li>Automatic badges plus four custom badge rules, custom styles, size and icons</li>
+</ul>
+<h2>Conversion and trust</h2>
+<ul>
+<li>Recently viewed products (no app required)</li>
+<li>Delivery estimates, trust icons, payment icons</li>
+<li>Reviews via any reviews app that uses Shopify&#39;s standard rating metafields</li>
+</ul>
+<h2>Quality</h2>
+<ul>
+<li>Accessible markup, keyboard navigation, focus states, ARIA for menus, drawers, dialogs, tabs and sliders</li>
+<li>Responsive images, lazy loading, no third-party libraries</li>
+<li>English and French translations</li>
+</ul>
+<h2>V5 additions</h2>
+<ul>
+<li><strong>Motion:</strong> intensity setting (Off, Subtle, Standard, Expressive).</li>
+<li><strong>Mobile:</strong> bottom navigation bar.</li>
+<li><strong>Search:</strong> recent searches on the shopper&#39;s device.</li>
+<li><strong>Collections:</strong> Load more and Infinite scroll.</li>
+<li><strong>Product page:</strong> pre-order state from real inventory settings.</li>
+<li><strong>Sections:</strong> FAQ with optional structured data, and Comparison table. New Design-section presets: Stats and Timeline.</li>
+<li><strong>Theme styles:</strong> Conversion, High-impact, Product-focused and Mobile-first.</li>
+</ul>
+<h2>V6 additions</h2>
+<ul>
+<li>Bundle builder: mix and match with tier pricing, builder page, product block, collection button, promo section and cart grouping (optional; uses Shopify discounts).</li>
+<li>Trade portal: wholesale landing page and application form, trade order page for Shopify B2B buyers, order-minimum guidance (optional; requires Shopify B2B).</li>
+<li>Store header layout with inline search, category menu, shortcuts with HOT tags and an accordion menu on phones.</li>
+<li>New sections: Brand statement, Brand bento, Shop lanes, Product families, Product rail, Editorial collage, Community quotes, Newsletter band.</li>
+<li>Hand-picked products in Featured collection, product spotlight options, more promo-tile layouts, footer legal notice, solid quick-add bar, payment-icon options.</li>
+</ul>
+</main></div></body></html>

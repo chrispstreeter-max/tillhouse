@@ -1,0 +1,166 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Complete theme guide — Tillhouse documentation</title><link rel="icon" href="../assets/tillhouse-favicon-32.png">
+<style>
+:root { --ink:#151412; --paper:#F4EFE6; --red:#D9432B; --stone:#E4DCCD; --muted:#5E5850; --line:rgba(21,20,18,.14); }
+* { box-sizing:border-box; } [hidden] { display:none !important; }
+a { color:inherit; } .layout > * { min-width:0; } main { overflow-wrap:anywhere; } main img { max-width:100%; }
+body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 Inter, system-ui, sans-serif; }
+@font-face { font-family: Archivo; src: url(../assets/Archivo-Variable.ttf); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: Inter; src: url(../assets/Inter-Variable.ttf); font-weight: 100 900; }
+.top { display:flex; align-items:center; justify-content:space-between; gap:16px; width:min(1100px,100% - 32px); margin:0 auto; padding:18px 0; }
+.top img { height:30px; width:auto; display:block; }
+.top nav { display:flex; gap:18px; font-weight:600; font-size:15px; } .top nav a { text-decoration:none; }
+.layout { display:grid; grid-template-columns:230px minmax(0,1fr); gap:48px; width:min(1100px,100% - 32px); margin:0 auto; padding:24px 0 72px; }
+.side { position:sticky; top:16px; align-self:start; font-size:15px; } .side ul { list-style:none; margin:0; padding:0; display:grid; gap:4px; }
+.side a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; } .side a[aria-current] { background:var(--stone); font-weight:700; }
+main h1 { font:800 clamp(32px,4.4vw,52px)/1 Archivo, sans-serif; font-stretch:125%; letter-spacing:-.03em; margin:0 0 24px; }
+main h2 { font:800 26px/1.15 Archivo, sans-serif; font-stretch:112%; margin:40px 0 12px; } main h3 { font-size:19px; margin:28px 0 8px; }
+main a { color:inherit; } main code { background:#fff; padding:1px 6px; border-radius:5px; font-size:.92em; }
+main table { width:100%; border-collapse:collapse; font-size:15px; margin:16px 0; display:block; overflow-x:auto; }
+main th, main td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+main blockquote { margin:16px 0; padding:12px 16px; background:#fff; border-left:3px solid var(--red); border-radius:6px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; list-style:none; padding:0; }
+.cards a { display:block; height:100%; background:#fff; border-radius:12px; padding:16px 18px; text-decoration:none; box-shadow:0 0 0 1px var(--line); font-weight:700; }
+form { display:grid; gap:16px; max-width:640px; background:#fff; padding:24px; border-radius:14px; box-shadow:0 0 0 1px var(--line); }
+.row { display:grid; grid-template-columns:1fr 1fr; gap:16px; } label { display:grid; gap:6px; min-width:0; font-weight:600; font-size:15px; }
+input, textarea { width:100%; min-width:0; font:inherit; padding:10px 12px; border:1px solid #bdb5a8; border-radius:8px; background:#fff; }
+input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visible { outline:3px solid var(--red); outline-offset:2px; }
+small { color:var(--muted); font-weight:400; }
+button { font:700 16px Inter, sans-serif; min-height:48px; padding:0 22px; border:0; border-radius:999px; background:var(--ink); color:var(--paper); cursor:pointer; justify-self:start; }
+.note { background:var(--stone); border-radius:10px; padding:12px 14px; font-size:15px; }
+@media (max-width:820px) { .layout { grid-template-columns:1fr; gap:16px; } .side { position:static; } .side ul { display:flex; flex-wrap:wrap; } .row { grid-template-columns:1fr; } .top nav { display:none; } }
+</style></head><body>
+<header class="top"><a href="../index.html"><img src="../assets/tillhouse-lockup.svg" alt="Tillhouse"></a>
+<nav aria-label="Site"><a href="../docs/index.html">Docs</a><a href="../docs/faq.html">FAQ</a><a href="../support.html">Support</a></nav></header>
+<div class="layout"><nav class="side" aria-label="Documentation"><ul>
+    <li><a href="../docs/index.html">All guides</a></li>
+    <li><a href="../docs/quick-start.html">Quick start</a></li><li><a href="../docs/setup-checklist.html">Setup checklist</a></li><li><a href="../docs/styles.html">Styles</a></li><li><a href="../docs/theme-guide.html" aria-current="page">Complete theme guide</a></li><li><a href="../docs/theme-editor.html">Theme editor</a></li><li><a href="../docs/product-page.html">Product page</a></li><li><a href="../docs/design-system.html">Design system</a></li><li><a href="../docs/promotions.html">Promotions</a></li><li><a href="../docs/bundle-builder.html">Bundle builder</a></li><li><a href="../docs/trade-portal.html">Trade portal</a></li><li><a href="../docs/features.html">Feature list</a></li><li><a href="../docs/troubleshooting.html">Troubleshooting</a></li><li><a href="../docs/release-notes.html">Release notes</a></li>
+    <li><a href="../docs/faq.html">FAQ</a></li>
+    <li><a href="../support.html">Support</a></li></ul></nav><main><h1>Complete Theme Guide</h1>
+<p>Tillhouse is a modular Shopify theme: every page is made of <strong>sections</strong> you add, remove and reorder, and most sections are made of <strong>blocks</strong> you can add, remove, reorder, duplicate and hide. Store-wide design — fonts, colours, buttons, spacing — is set once in <strong>Theme settings</strong> and followed everywhere.</p>
+<h2>How the theme is organised</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Where</th>
+<th>What it controls</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Theme settings</td>
+<td>Theme Editor › brush icon</td>
+<td>The design system (style direction, colours, typography, buttons, cards, forms, spacing, media, animation), badges, promotions, search, cart, social links, SEO.</td>
+</tr>
+<tr>
+<td>Header and footer</td>
+<td>Header / Footer groups in the sidebar</td>
+<td>Announcement bar, header, footer — shared by every page.</td>
+</tr>
+<tr>
+<td>Templates</td>
+<td>Page selector at the top of the editor</td>
+<td>Home page, product templates, collection templates, cart, search, blog, pages, customer pages.</td>
+</tr>
+<tr>
+<td>Sections</td>
+<td><em>Add section</em> on each template</td>
+<td>Full-width bands: hero, product grid, image with text, before/after…</td>
+</tr>
+<tr>
+<td>Blocks</td>
+<td><em>Add block</em> inside a section</td>
+<td>Headings, text, images, buttons, product information components, tiles…</td>
+</tr>
+</tbody></table>
+<p><em>Add section</em> and <em>Add block</em> list everything in groups: <strong>Layout, Commerce, Media, Content, Marketing, Social proof, Storytelling, Navigation, Product page</strong> and <strong>Advanced</strong>.</p>
+<h2>Home page</h2>
+<p>Build the home page from any combination of sections. The most useful:</p>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Opening statement</td>
+<td><strong>Slideshow</strong>, <strong>Hero</strong> (editorial, split, full-width image, video, promotion banner)</td>
+</tr>
+<tr>
+<td>Promotions</td>
+<td><strong>Promotional banner</strong> (full image, split, boxed, slim bar, countdown), <strong>Promotion tiles</strong></td>
+</tr>
+<tr>
+<td>Shop categories</td>
+<td><strong>Collection list</strong> (grid or mosaic), Design section › <em>Category Grid</em></td>
+</tr>
+<tr>
+<td>Show products</td>
+<td><strong>Product grid</strong> (grid, carousel, editorial), <strong>Featured product</strong>, <strong>Recently viewed</strong></td>
+</tr>
+<tr>
+<td>Tell your story</td>
+<td><strong>Image with text</strong>, Design section presets: <em>Story Section</em>, <em>Image with Text</em>, <em>Product story</em>, <em>Video with text</em>, <em>Full-width image / video</em>, <em>Features</em></td>
+</tr>
+<tr>
+<td>Compare</td>
+<td><strong>Before / after</strong> section, or the <em>Before / after story</em> preset</td>
+</tr>
+<tr>
+<td>Social proof</td>
+<td><strong>Testimonials</strong> (quotes and press logos), Design section › <em>Testimonial</em>, <em>Brand Grid</em> (logos), <em>Guarantees</em></td>
+</tr>
+<tr>
+<td>Capture emails</td>
+<td><strong>Newsletter</strong>, Design section › <em>Newsletter</em></td>
+</tr>
+<tr>
+<td>Anything else</td>
+<td><strong>Design section</strong> — a blank canvas of blocks with columns per device</td>
+</tr>
+</tbody></table>
+<p>No demo content is required: every section works with your own images and text, and empty image slots show neutral placeholder artwork only until you add images.</p>
+<h2>Header and navigation</h2>
+<ul>
+<li><strong>Announcement bar</strong> — rotating messages, offer announcements, optional country/language selector.</li>
+<li><strong>Header</strong> — five layouts: <strong>Standard</strong> (logo left, menu centre), <strong>Inline</strong> (logo and menu left), <strong>Editorial</strong> (logo centre, menu below), <strong>Minimal</strong> (menu button only) and <strong>Campaign</strong> (with a call-to-action button). Options: menu and alignment, highlighted item (e.g. Sale), sticky (off, always, on scroll up), open menus on hover, full width, line below, search / account / country &amp; language icons, cart icon, colour schemes and <strong>transparent over the home page</strong>.</li>
+<li><strong>Mega menus</strong> — add <em>Mega menu</em> blocks to the Header and name the top-level menu item: link columns with feature images, with products, with a promotion panel, or collection image tiles.</li>
+<li><strong>Mobile</strong> — phones and tablets use a menu button and a drill-down menu drawer with account, country/language and social links.</li>
+</ul>
+<h2>Search</h2>
+<p><strong>Theme settings › Search</strong>: search opens as a panel from the top, a side drawer or full screen (phones always full screen). Before typing it can show your popular searches, a quick-links menu and featured products; while typing, predictive results for suggestions, products, collections and pages/articles — each switchable. The Search page has the same filters and sorting as collections.</p>
+<h2>Product pages</h2>
+<p>Two columns — gallery left, product information right by default — built from draggable blocks: breadcrumbs, title, subtitle, rating, price, badges, stock, variant pickers, quantity, buy buttons, Buy it now, payment messaging, delivery, pickup, offers, size guide, accordions, tabs, description, specifications, Complete the look, related products, siblings, share and more. See the <strong>Product Page Guide</strong>.</p>
+<h2>Collections</h2>
+<ul>
+<li><strong>Collection banner</strong> — text, split or image overlay layouts, description, product count, quick-link pills, breadcrumbs.</li>
+<li><strong>Collection grid</strong> — products per page, columns for desktop, tablet and mobile, density switcher, filters in a sidebar or drawer (Shopify Search &amp; Discovery), sorting, sticky toolbar, pagination.</li>
+<li><strong>Editorial tiles</strong> inside the grid — Image, Text, Product, Video and Offer tiles, each with its position, desktop width (1–3 columns), phone width and height (1–2 rows).</li>
+<li>Collection templates can add any other section above or below the grid.</li>
+</ul>
+<h2>Product cards</h2>
+<p>One card everywhere (collections, search, grids, recommendations): hover image, badges, rating, colour swatches, vendor or subtitle, quick add (single-variant products) and quick view (multi-variant). Options in <strong>Theme settings › Cards</strong>.</p>
+<h2>Cart</h2>
+<p>Cart drawer or cart page (<strong>Theme settings › Cart</strong>). Add blocks to either: progress bar (free shipping, free gift, spend tiers, custom milestones), promotion message, offer reminders, upsells (Shopify recommendations or hand-picked), discount code, gift wrap, gift message, terms checkbox and app blocks. Checkout is Shopify&#39;s own.</p>
+<h2>Promotions and badges</h2>
+<ul>
+<li><strong>Offers 1–6</strong> (Theme settings) power offer badges, product offer panels, the Multi-buy block, the <strong>Promotion</strong> block, collection Offer tiles, promotional banners and cart reminders — shown only when the matching Shopify discount is confirmed. See the <strong>Promotions Guide</strong>.</li>
+<li><strong>Badges</strong> — automatic (sale, sold out, new, low stock, best seller, limited, exclusive, online only, collections, metafield, tags) plus four <strong>Badge rules</strong> of your own (e.g. Trending, Staff pick), two custom badge styles, size and icons.</li>
+<li><strong>Campaign mode</strong> — a scheduled store-wide campaign with bar, colours and badge.</li>
+</ul>
+<h2>Design system</h2>
+<p>Set once in <strong>Theme settings</strong> and followed by every section. See the <strong>Design System Guide</strong>.</p>
+<h2>Responsive design and visibility</h2>
+<ul>
+<li>Every section and block can be shown or hidden separately on <strong>desktop (990px+), tablet (750–989px) and mobile (under 750px)</strong>.</li>
+<li>Layout sections and Group blocks have columns, direction, alignment, gap and padding per device.</li>
+<li>Sections and Group blocks have <strong>conditions</strong>: dates, logged-in or guest customers, countries, cart value, product tags, collections, product stock/sale state, Campaign mode.</li>
+</ul>
+<h2>Before / after</h2>
+<p>Available as a section and as a block: before and after images (with phone images), labels, starting position, aspect ratio (with a phone ratio), width, corner radius and border. Works with mouse, touch and keyboard.</p>
+<h2>Footer</h2>
+<p>Footer layouts (standard, minimal, editorial, campaign) with brand, menu, text, newsletter and app blocks, social links, payment icons, country/language selectors and copyright.</p>
+<h2>Apps</h2>
+<p>Sections accept <strong>app blocks</strong> where apps are useful (product information, reviews, cart, collection grid, apps section). App embeds are turned on in <strong>Theme settings › App embeds</strong>.</p>
+</main></div></body></html>

@@ -1,0 +1,76 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design system — Tillhouse documentation</title><link rel="icon" href="../assets/tillhouse-favicon-32.png">
+<style>
+:root { --ink:#151412; --paper:#F4EFE6; --red:#D9432B; --stone:#E4DCCD; --muted:#5E5850; --line:rgba(21,20,18,.14); }
+* { box-sizing:border-box; } [hidden] { display:none !important; }
+a { color:inherit; } .layout > * { min-width:0; } main { overflow-wrap:anywhere; } main img { max-width:100%; }
+body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 Inter, system-ui, sans-serif; }
+@font-face { font-family: Archivo; src: url(../assets/Archivo-Variable.ttf); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: Inter; src: url(../assets/Inter-Variable.ttf); font-weight: 100 900; }
+.top { display:flex; align-items:center; justify-content:space-between; gap:16px; width:min(1100px,100% - 32px); margin:0 auto; padding:18px 0; }
+.top img { height:30px; width:auto; display:block; }
+.top nav { display:flex; gap:18px; font-weight:600; font-size:15px; } .top nav a { text-decoration:none; }
+.layout { display:grid; grid-template-columns:230px minmax(0,1fr); gap:48px; width:min(1100px,100% - 32px); margin:0 auto; padding:24px 0 72px; }
+.side { position:sticky; top:16px; align-self:start; font-size:15px; } .side ul { list-style:none; margin:0; padding:0; display:grid; gap:4px; }
+.side a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; } .side a[aria-current] { background:var(--stone); font-weight:700; }
+main h1 { font:800 clamp(32px,4.4vw,52px)/1 Archivo, sans-serif; font-stretch:125%; letter-spacing:-.03em; margin:0 0 24px; }
+main h2 { font:800 26px/1.15 Archivo, sans-serif; font-stretch:112%; margin:40px 0 12px; } main h3 { font-size:19px; margin:28px 0 8px; }
+main a { color:inherit; } main code { background:#fff; padding:1px 6px; border-radius:5px; font-size:.92em; }
+main table { width:100%; border-collapse:collapse; font-size:15px; margin:16px 0; display:block; overflow-x:auto; }
+main th, main td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+main blockquote { margin:16px 0; padding:12px 16px; background:#fff; border-left:3px solid var(--red); border-radius:6px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; list-style:none; padding:0; }
+.cards a { display:block; height:100%; background:#fff; border-radius:12px; padding:16px 18px; text-decoration:none; box-shadow:0 0 0 1px var(--line); font-weight:700; }
+form { display:grid; gap:16px; max-width:640px; background:#fff; padding:24px; border-radius:14px; box-shadow:0 0 0 1px var(--line); }
+.row { display:grid; grid-template-columns:1fr 1fr; gap:16px; } label { display:grid; gap:6px; min-width:0; font-weight:600; font-size:15px; }
+input, textarea { width:100%; min-width:0; font:inherit; padding:10px 12px; border:1px solid #bdb5a8; border-radius:8px; background:#fff; }
+input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visible { outline:3px solid var(--red); outline-offset:2px; }
+small { color:var(--muted); font-weight:400; }
+button { font:700 16px Inter, sans-serif; min-height:48px; padding:0 22px; border:0; border-radius:999px; background:var(--ink); color:var(--paper); cursor:pointer; justify-self:start; }
+.note { background:var(--stone); border-radius:10px; padding:12px 14px; font-size:15px; }
+@media (max-width:820px) { .layout { grid-template-columns:1fr; gap:16px; } .side { position:static; } .side ul { display:flex; flex-wrap:wrap; } .row { grid-template-columns:1fr; } .top nav { display:none; } }
+</style></head><body>
+<header class="top"><a href="../index.html"><img src="../assets/tillhouse-lockup.svg" alt="Tillhouse"></a>
+<nav aria-label="Site"><a href="../docs/index.html">Docs</a><a href="../docs/faq.html">FAQ</a><a href="../support.html">Support</a></nav></header>
+<div class="layout"><nav class="side" aria-label="Documentation"><ul>
+    <li><a href="../docs/index.html">All guides</a></li>
+    <li><a href="../docs/quick-start.html">Quick start</a></li><li><a href="../docs/setup-checklist.html">Setup checklist</a></li><li><a href="../docs/styles.html">Styles</a></li><li><a href="../docs/theme-guide.html">Complete theme guide</a></li><li><a href="../docs/theme-editor.html">Theme editor</a></li><li><a href="../docs/product-page.html">Product page</a></li><li><a href="../docs/design-system.html" aria-current="page">Design system</a></li><li><a href="../docs/promotions.html">Promotions</a></li><li><a href="../docs/bundle-builder.html">Bundle builder</a></li><li><a href="../docs/trade-portal.html">Trade portal</a></li><li><a href="../docs/features.html">Feature list</a></li><li><a href="../docs/troubleshooting.html">Troubleshooting</a></li><li><a href="../docs/release-notes.html">Release notes</a></li>
+    <li><a href="../docs/faq.html">FAQ</a></li>
+    <li><a href="../support.html">Support</a></li></ul></nav><main><h1>Design System Guide</h1>
+<p>All design choices live in <strong>Theme settings</strong> and apply to every section. Change them once; the whole store follows.</p>
+<h2>Start with a style direction</h2>
+<p>The quickest start is <strong>Theme settings › Theme style</strong>: choose one of the three styles (Tillhouse, Gilt or Larder) and it sets everything below, including the style direction, in one step.</p>
+<p><strong>Theme settings › Style direction</strong> — Luxury, Fashion, Beauty, Streetwear, Electronics &amp; tech, Home &amp; living, Food &amp; beverage, General retail, Editorial or Minimal. It recomposes key sections (slideshow, collection lists, product rows, promo tiles) for that kind of store. Each demo sets it for you; change it here if you want a different combination, then fine-tune the groups below.</p>
+<h2>Colours</h2>
+<ul>
+<li><strong>Colour schemes</strong> — each scheme has background, surface, text, muted text, border, primary, secondary and accent colours. Sections and blocks pick a scheme, so a dark band or a tinted card is one click.</li>
+<li><strong>Sale, success and warning</strong> colours — used by sale prices, badges, stock messages and alerts.</li>
+<li>Keep text and background at WCAG AA contrast; Theme health warns in the editor when a scheme is too low.</li>
+</ul>
+<h2>Typography</h2>
+<ul>
+<li><strong>Fonts</strong> — heading, body and accent fonts from Shopify&#39;s font library.</li>
+<li><strong>Levels</strong> — Display, H1–H4, Body, Small, <strong>Caption</strong> (all small labels: eyebrows, filter and accordion headings, badges, tab labels), Button and <strong>Navigation</strong> (menu links). For each: font, size, weight, line height, <strong>letter spacing</strong> (hundredths of an em — 16 = 0.16em) and capitalisation.</li>
+<li><strong>Mobile scale</strong> — shrinks headings on phones.</li>
+</ul>
+<h2>Buttons</h2>
+<p>Style (solid, outline, underline), size (small, medium, large or <strong>custom height and side padding</strong>), corner radius, border width and hover effect (fade, invert, lift).</p>
+<h2>Cards</h2>
+<p>Card style (plain, bordered, surface, elevated), <strong>shadow</strong>, corner radius, padding, image ratio and fit, hover effect, text alignment, and what cards show: vendor or subtitle, rating, badges, colour swatches, and quick add/view.</p>
+<h2>Forms</h2>
+<p>Field style (<strong>outlined, filled or underline</strong>), field height, focus style (darker border or accent ring), input corner radius and border width.</p>
+<h2>Spacing</h2>
+<p>A spacing unit that scales every gap; page width and narrow page width; section spacing, page gutters and grid gaps — each for desktop and mobile. Sections can override their own spacing (or <em>Use global</em>).</p>
+<h2>Borders and radius</h2>
+<p>Global border width; radius for buttons, cards, images, inputs and badges.</p>
+<h2>Images</h2>
+<p>Image corner radius and the <strong>default crop position</strong> (centre, top or bottom) for cropped images; product card image ratio and fit. Images use Shopify&#39;s responsive image sizes and load lazily below the fold. Add alt text to every image in Shopify admin.</p>
+<h2>Icons</h2>
+<p>Stroke width, size and style (outline or filled) for the theme&#39;s icon set.</p>
+<h2>Badges</h2>
+<p>Size, icons, shape, position, maximum number and two custom colour styles — see the Promotions Guide and Complete Theme Guide.</p>
+<h2>Animation</h2>
+<p>Default entrance animation, speed, distance (intensity), stagger between items and hover effect. Visitors who ask their device for reduced motion never see animation. Any section can use <em>None</em>.</p>
+<h2>Header and footer defaults</h2>
+<p>Default header layout (Standard, Inline, Editorial, Minimal, Campaign) and footer layout used when the Header or Footer is set to <em>Use global</em>.</p>
+</main></div></body></html>

@@ -1,0 +1,220 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Product page — Tillhouse documentation</title><link rel="icon" href="../assets/tillhouse-favicon-32.png">
+<style>
+:root { --ink:#151412; --paper:#F4EFE6; --red:#D9432B; --stone:#E4DCCD; --muted:#5E5850; --line:rgba(21,20,18,.14); }
+* { box-sizing:border-box; } [hidden] { display:none !important; }
+a { color:inherit; } .layout > * { min-width:0; } main { overflow-wrap:anywhere; } main img { max-width:100%; }
+body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 Inter, system-ui, sans-serif; }
+@font-face { font-family: Archivo; src: url(../assets/Archivo-Variable.ttf); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: Inter; src: url(../assets/Inter-Variable.ttf); font-weight: 100 900; }
+.top { display:flex; align-items:center; justify-content:space-between; gap:16px; width:min(1100px,100% - 32px); margin:0 auto; padding:18px 0; }
+.top img { height:30px; width:auto; display:block; }
+.top nav { display:flex; gap:18px; font-weight:600; font-size:15px; } .top nav a { text-decoration:none; }
+.layout { display:grid; grid-template-columns:230px minmax(0,1fr); gap:48px; width:min(1100px,100% - 32px); margin:0 auto; padding:24px 0 72px; }
+.side { position:sticky; top:16px; align-self:start; font-size:15px; } .side ul { list-style:none; margin:0; padding:0; display:grid; gap:4px; }
+.side a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; } .side a[aria-current] { background:var(--stone); font-weight:700; }
+main h1 { font:800 clamp(32px,4.4vw,52px)/1 Archivo, sans-serif; font-stretch:125%; letter-spacing:-.03em; margin:0 0 24px; }
+main h2 { font:800 26px/1.15 Archivo, sans-serif; font-stretch:112%; margin:40px 0 12px; } main h3 { font-size:19px; margin:28px 0 8px; }
+main a { color:inherit; } main code { background:#fff; padding:1px 6px; border-radius:5px; font-size:.92em; }
+main table { width:100%; border-collapse:collapse; font-size:15px; margin:16px 0; display:block; overflow-x:auto; }
+main th, main td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+main blockquote { margin:16px 0; padding:12px 16px; background:#fff; border-left:3px solid var(--red); border-radius:6px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; list-style:none; padding:0; }
+.cards a { display:block; height:100%; background:#fff; border-radius:12px; padding:16px 18px; text-decoration:none; box-shadow:0 0 0 1px var(--line); font-weight:700; }
+form { display:grid; gap:16px; max-width:640px; background:#fff; padding:24px; border-radius:14px; box-shadow:0 0 0 1px var(--line); }
+.row { display:grid; grid-template-columns:1fr 1fr; gap:16px; } label { display:grid; gap:6px; min-width:0; font-weight:600; font-size:15px; }
+input, textarea { width:100%; min-width:0; font:inherit; padding:10px 12px; border:1px solid #bdb5a8; border-radius:8px; background:#fff; }
+input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visible { outline:3px solid var(--red); outline-offset:2px; }
+small { color:var(--muted); font-weight:400; }
+button { font:700 16px Inter, sans-serif; min-height:48px; padding:0 22px; border:0; border-radius:999px; background:var(--ink); color:var(--paper); cursor:pointer; justify-self:start; }
+.note { background:var(--stone); border-radius:10px; padding:12px 14px; font-size:15px; }
+@media (max-width:820px) { .layout { grid-template-columns:1fr; gap:16px; } .side { position:static; } .side ul { display:flex; flex-wrap:wrap; } .row { grid-template-columns:1fr; } .top nav { display:none; } }
+</style></head><body>
+<header class="top"><a href="../index.html"><img src="../assets/tillhouse-lockup.svg" alt="Tillhouse"></a>
+<nav aria-label="Site"><a href="../docs/index.html">Docs</a><a href="../docs/faq.html">FAQ</a><a href="../support.html">Support</a></nav></header>
+<div class="layout"><nav class="side" aria-label="Documentation"><ul>
+    <li><a href="../docs/index.html">All guides</a></li>
+    <li><a href="../docs/quick-start.html">Quick start</a></li><li><a href="../docs/setup-checklist.html">Setup checklist</a></li><li><a href="../docs/styles.html">Styles</a></li><li><a href="../docs/theme-guide.html">Complete theme guide</a></li><li><a href="../docs/theme-editor.html">Theme editor</a></li><li><a href="../docs/product-page.html" aria-current="page">Product page</a></li><li><a href="../docs/design-system.html">Design system</a></li><li><a href="../docs/promotions.html">Promotions</a></li><li><a href="../docs/bundle-builder.html">Bundle builder</a></li><li><a href="../docs/trade-portal.html">Trade portal</a></li><li><a href="../docs/features.html">Feature list</a></li><li><a href="../docs/troubleshooting.html">Troubleshooting</a></li><li><a href="../docs/release-notes.html">Release notes</a></li>
+    <li><a href="../docs/faq.html">FAQ</a></li>
+    <li><a href="../support.html">Support</a></li></ul></nav><main><h1>Product Page Guide</h1>
+<h2>Product templates</h2>
+<p>The theme includes four product templates: <strong>Default product</strong>, <strong>editorial</strong>, <strong>minimal</strong> and <strong>sale</strong>. Assign one per product in <strong>Products › (product) › Theme template</strong>. In the Theme Editor, choose <em>Products</em> in the page selector and pick the template to edit it. Create more with <em>Create template</em> — for example a template for one product type.</p>
+<h2>The layout</h2>
+<p>The <strong>Product information</strong> section has two columns.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Options</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Gallery position</td>
+<td>Left (default) or right — the information column takes the other side.</td>
+</tr>
+<tr>
+<td>Column widths</td>
+<td>40/60, 45/55, 50/50, 55/45 (default), 60/40, 65/35 or custom.</td>
+</tr>
+<tr>
+<td>Content width</td>
+<td>Narrow, page, wide, full, edge to edge, or a custom maximum.</td>
+</tr>
+<tr>
+<td>Column gap</td>
+<td>0–120 px.</td>
+</tr>
+<tr>
+<td>Tablet (750–989px)</td>
+<td>Stacked or two columns.</td>
+</tr>
+<tr>
+<td>Scrolling (desktop)</td>
+<td><strong>Auto</strong> — the shorter column stays in view; sticky information; sticky gallery; or normal scrolling. Plus a sticky offset below the header and top or centre alignment.</td>
+</tr>
+<tr>
+<td>Information width</td>
+<td>Maximum width of the information column.</td>
+</tr>
+</tbody></table>
+<p>Phones always stack: breadcrumbs, gallery, then your blocks in the order you set.</p>
+<h2>Product information blocks</h2>
+<p>Every part of the information column is a block. In the left sidebar you can <strong>drag</strong> blocks to reorder them, <strong>add</strong> blocks with <em>Add block</em> (group <em>Product page</em>), <strong>duplicate</strong> or <strong>remove</strong> them from the block&#39;s menu, <strong>hide</strong> them with the eye icon, and show them per device.</p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What it shows</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Breadcrumbs</td>
+<td>Home › Collection › Product; optional &quot;Back to collection&quot;; can move above the gallery on phones.</td>
+</tr>
+<tr>
+<td>Product badges</td>
+<td>Sale, new, low stock and your badge rules.</td>
+</tr>
+<tr>
+<td>Product title</td>
+<td>Title with optional vendor, type or collection above.</td>
+</tr>
+<tr>
+<td>Subtitle</td>
+<td>From the <code>custom.subtitle</code> or <code>descriptors.subtitle</code> metafield.</td>
+</tr>
+<tr>
+<td>Rating</td>
+<td>Stars, average and review count from your reviews app; optional 5→1 star breakdown.</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>Price, compare-at price, amount or % saved, Sale badge, tax note.</td>
+</tr>
+<tr>
+<td>Stock indicator</td>
+<td>In stock / low stock / sold out, from Shopify inventory.</td>
+</tr>
+<tr>
+<td>Variant picker</td>
+<td>Buttons, pills, dropdown or colour swatches. Add it as <strong>Size selector</strong> or <strong>Colour selector</strong> to show one option per block — they work together.</td>
+</tr>
+<tr>
+<td>Quantity</td>
+<td>Quantity selector (also available inside Buy buttons).</td>
+</tr>
+<tr>
+<td>Buy buttons</td>
+<td>Add to cart, Buy it now, subscriptions, gift card recipient, instalments, pickup.</td>
+</tr>
+<tr>
+<td>Buy it now</td>
+<td>Shopify&#39;s accelerated checkout as its own block.</td>
+</tr>
+<tr>
+<td>Payment messaging</td>
+<td>Shop Pay Installments message.</td>
+</tr>
+<tr>
+<td>Delivery estimate</td>
+<td>Business-day window, optional postcode check using your own delivery times.</td>
+</tr>
+<tr>
+<td>Pickup availability</td>
+<td>Local pickup from Settings › Locations.</td>
+</tr>
+<tr>
+<td>Offers / Multi-buy offer / Promotional badge / Promotion</td>
+<td>Live offers, tiers (Buy 2 save 10%…), badges — see the Promotions Guide.</td>
+</tr>
+<tr>
+<td>Size guide</td>
+<td>Link that opens a page, rich text or the <code>custom.size_guide</code> page metafield in a dialog.</td>
+</tr>
+<tr>
+<td>Collapsible content</td>
+<td>Accordions (materials, care, delivery, returns, FAQ) from text, a page or a metafield.</td>
+</tr>
+<tr>
+<td>Tabs</td>
+<td>Description, text, page or metafield as tabs.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Product description, as text or an accordion.</td>
+</tr>
+<tr>
+<td>Specifications</td>
+<td>Label/value rows, each connected to a product metafield.</td>
+</tr>
+<tr>
+<td>Complete the look</td>
+<td>This product plus chosen products with a total and &quot;Add all to cart&quot;.</td>
+</tr>
+<tr>
+<td>Recommended products</td>
+<td>Related (automatic) or complementary products (Search &amp; Discovery app).</td>
+</tr>
+<tr>
+<td>Sibling products</td>
+<td>Other colourways (separate products) as images, swatches or named buttons.</td>
+</tr>
+<tr>
+<td>Share</td>
+<td>Device share sheet or a menu (copy link, email, WhatsApp, Facebook, Pinterest, X).</td>
+</tr>
+<tr>
+<td>Sticky add to cart</td>
+<td>Bar with image, price, variant menu and quantity, at the top or bottom.</td>
+</tr>
+<tr>
+<td>Image, Video, Text, Heading, Custom Liquid, Group, app blocks</td>
+<td>Your own content anywhere in the column.</td>
+</tr>
+</tbody></table>
+<p><strong>Empty blocks disappear</strong>: a rating without reviews, an offer that isn&#39;t live, a size guide without content or an empty FAQ render nothing — also in the editor.</p>
+<h2>Gallery</h2>
+<p>Layouts: <strong>large image with thumbnails</strong> (thumbnails left, right or below), <strong>single large image</strong> (slider), <strong>two-column grid</strong>, <strong>stacked</strong> and <strong>masonry</strong>. Also thumbnail size and gap, image width, aspect ratio (original, square, portrait, landscape or custom), cover or contain, image gap, image counter, arrows, zoom on hover and full-screen lightbox. On phones the gallery swipes edge to edge, inside the page margins, or with thumbnails below. Videos, YouTube/Vimeo and 3D models are supported. The gallery jumps to a variant&#39;s image when the variant changes.</p>
+<h2>Variants</h2>
+<p>Variant options come from Shopify. Colour swatches use Shopify&#39;s category metafield swatches (set on the option values). Sold-out combinations are marked; changing a variant updates price, stock, images and the URL without reloading. Separate <strong>Size selector</strong> and <strong>Colour selector</strong> blocks can sit in different places and still select one variant.</p>
+<h2>Offers</h2>
+<p>Offers from <strong>Theme settings › Offer 1–6</strong> appear only while live and only on products they apply to. The <strong>Multi-buy offer</strong> block shows tiers such as <em>Buy 2 → 10% off, Buy 3 → 15% off</em>; tapping a tier sets the quantity. The discount itself is applied by Shopify at checkout.</p>
+<h2>Size guide and FAQ</h2>
+<ul>
+<li><strong>Size guide</strong>: create a page with your size chart, then choose it in the block, or create a <em>Page</em> metafield <code>custom.size_guide</code> to give products different guides.</li>
+<li><strong>FAQ</strong>: create a rich-text metafield <code>custom.faq</code> and connect it in a Collapsible content or Tab block. Products without FAQ content show nothing.</li>
+</ul>
+<h2>Complete the Look</h2>
+<p>Add the <strong>Complete the look</strong> block (information column) or section (below the product). Choose products, or create a <em>Product list</em> metafield <code>custom.complete_the_look</code> and connect it with the dynamic source icon so each product has its own set.</p>
+<h2>Related products</h2>
+<ul>
+<li><strong>Recommended products</strong> block (in the column): Shopify&#39;s related or complementary products.</li>
+<li><strong>Related products</strong> section (below): Shopify recommendations, same collection, same product type, same vendor, best sellers, new arrivals, manual selection or recently viewed.</li>
+</ul>
+<h2>Reviews</h2>
+<p>Install a reviews app that writes Shopify&#39;s standard <code>reviews.rating</code> and <code>reviews.rating_count</code> metafields (most do). The <strong>Rating</strong> block and card stars read them; add the app&#39;s block to the <strong>Product reviews</strong> section for the review list and form. The theme never shows ratings without data.</p>
+<h2>Storytelling sections</h2>
+<p>Add Design section presets from <em>Add section › Storytelling</em> above or below the product: Product story, Video with text, Full-width image or video, Features, Materials &amp; care, Specifications, Testimonial and Before / after story. On product templates, block settings can be connected to product metafields so one template tells a different story for each product.</p>
+<h2>Mobile product pages</h2>
+<p>Phones show breadcrumbs, the swipe gallery, then your blocks in order. Hide blocks you don&#39;t need on phones (eye icon per device), add a <strong>Sticky add to cart</strong> bar, and preview with the mobile icon in the editor.</p>
+</main></div></body></html>

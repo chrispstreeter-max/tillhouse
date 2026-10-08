@@ -1,0 +1,183 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Theme editor — Tillhouse documentation</title><link rel="icon" href="../assets/tillhouse-favicon-32.png">
+<style>
+:root { --ink:#151412; --paper:#F4EFE6; --red:#D9432B; --stone:#E4DCCD; --muted:#5E5850; --line:rgba(21,20,18,.14); }
+* { box-sizing:border-box; } [hidden] { display:none !important; }
+a { color:inherit; } .layout > * { min-width:0; } main { overflow-wrap:anywhere; } main img { max-width:100%; }
+body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 Inter, system-ui, sans-serif; }
+@font-face { font-family: Archivo; src: url(../assets/Archivo-Variable.ttf); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: Inter; src: url(../assets/Inter-Variable.ttf); font-weight: 100 900; }
+.top { display:flex; align-items:center; justify-content:space-between; gap:16px; width:min(1100px,100% - 32px); margin:0 auto; padding:18px 0; }
+.top img { height:30px; width:auto; display:block; }
+.top nav { display:flex; gap:18px; font-weight:600; font-size:15px; } .top nav a { text-decoration:none; }
+.layout { display:grid; grid-template-columns:230px minmax(0,1fr); gap:48px; width:min(1100px,100% - 32px); margin:0 auto; padding:24px 0 72px; }
+.side { position:sticky; top:16px; align-self:start; font-size:15px; } .side ul { list-style:none; margin:0; padding:0; display:grid; gap:4px; }
+.side a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; } .side a[aria-current] { background:var(--stone); font-weight:700; }
+main h1 { font:800 clamp(32px,4.4vw,52px)/1 Archivo, sans-serif; font-stretch:125%; letter-spacing:-.03em; margin:0 0 24px; }
+main h2 { font:800 26px/1.15 Archivo, sans-serif; font-stretch:112%; margin:40px 0 12px; } main h3 { font-size:19px; margin:28px 0 8px; }
+main a { color:inherit; } main code { background:#fff; padding:1px 6px; border-radius:5px; font-size:.92em; }
+main table { width:100%; border-collapse:collapse; font-size:15px; margin:16px 0; display:block; overflow-x:auto; }
+main th, main td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+main blockquote { margin:16px 0; padding:12px 16px; background:#fff; border-left:3px solid var(--red); border-radius:6px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; list-style:none; padding:0; }
+.cards a { display:block; height:100%; background:#fff; border-radius:12px; padding:16px 18px; text-decoration:none; box-shadow:0 0 0 1px var(--line); font-weight:700; }
+form { display:grid; gap:16px; max-width:640px; background:#fff; padding:24px; border-radius:14px; box-shadow:0 0 0 1px var(--line); }
+.row { display:grid; grid-template-columns:1fr 1fr; gap:16px; } label { display:grid; gap:6px; min-width:0; font-weight:600; font-size:15px; }
+input, textarea { width:100%; min-width:0; font:inherit; padding:10px 12px; border:1px solid #bdb5a8; border-radius:8px; background:#fff; }
+input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visible { outline:3px solid var(--red); outline-offset:2px; }
+small { color:var(--muted); font-weight:400; }
+button { font:700 16px Inter, sans-serif; min-height:48px; padding:0 22px; border:0; border-radius:999px; background:var(--ink); color:var(--paper); cursor:pointer; justify-self:start; }
+.note { background:var(--stone); border-radius:10px; padding:12px 14px; font-size:15px; }
+@media (max-width:820px) { .layout { grid-template-columns:1fr; gap:16px; } .side { position:static; } .side ul { display:flex; flex-wrap:wrap; } .row { grid-template-columns:1fr; } .top nav { display:none; } }
+</style></head><body>
+<header class="top"><a href="../index.html"><img src="../assets/tillhouse-lockup.svg" alt="Tillhouse"></a>
+<nav aria-label="Site"><a href="../docs/index.html">Docs</a><a href="../docs/faq.html">FAQ</a><a href="../support.html">Support</a></nav></header>
+<div class="layout"><nav class="side" aria-label="Documentation"><ul>
+    <li><a href="../docs/index.html">All guides</a></li>
+    <li><a href="../docs/quick-start.html">Quick start</a></li><li><a href="../docs/setup-checklist.html">Setup checklist</a></li><li><a href="../docs/styles.html">Styles</a></li><li><a href="../docs/theme-guide.html">Complete theme guide</a></li><li><a href="../docs/theme-editor.html" aria-current="page">Theme editor</a></li><li><a href="../docs/product-page.html">Product page</a></li><li><a href="../docs/design-system.html">Design system</a></li><li><a href="../docs/promotions.html">Promotions</a></li><li><a href="../docs/bundle-builder.html">Bundle builder</a></li><li><a href="../docs/trade-portal.html">Trade portal</a></li><li><a href="../docs/features.html">Feature list</a></li><li><a href="../docs/troubleshooting.html">Troubleshooting</a></li><li><a href="../docs/release-notes.html">Release notes</a></li>
+    <li><a href="../docs/faq.html">FAQ</a></li>
+    <li><a href="../support.html">Support</a></li></ul></nav><main><h1>Theme Editor Guide</h1>
+<p>Open it from <strong>Online Store › Themes › Tillhouse › Customize</strong>. Everything below is done with Shopify&#39;s own editor — no code.</p>
+<h2>Sections</h2>
+<ul>
+<li><strong>Add a section</strong>: in the left sidebar choose <em>Add section</em> (inside the template area, or in the Header/Footer group). Sections are grouped: Layout, Commerce, Media, Content, Marketing, Social proof, Storytelling, Navigation.</li>
+<li><strong>Reorder</strong>: drag a section by its handle, or use its menu › <em>Move up / Move down</em>.</li>
+<li><strong>Hide</strong>: the eye icon hides a section without deleting it.</li>
+<li><strong>Remove</strong>: the section&#39;s menu › <em>Remove section</em>.</li>
+<li><strong>Duplicate</strong>: the section&#39;s menu › <em>Duplicate</em> (useful for a sale version of a section with different conditions).</li>
+</ul>
+<h2>Blocks</h2>
+<p>Sections such as Design section, Hero, Featured product, Product information, Collection grid, Cart and Footer contain blocks.</p>
+<ul>
+<li><strong>Add</strong>: <em>Add block</em> under the section. Some blocks contain other blocks (Group, Tabs, Specifications, Complete the look).</li>
+<li><strong>Reorder</strong>: drag blocks; you can drag a block into or out of a Group.</li>
+<li><strong>Duplicate / remove</strong>: the block&#39;s menu.</li>
+<li><strong>Hide</strong>: the eye icon.</li>
+</ul>
+<h2>Settings that apply everywhere</h2>
+<table>
+<thead>
+<tr>
+<th>Setting group</th>
+<th>Where</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Section style</td>
+<td>Most sections</td>
+<td>Colour scheme, content width.</td>
+</tr>
+<tr>
+<td>Spacing</td>
+<td>Most sections</td>
+<td>Top/bottom padding for desktop and mobile; <em>Use global</em> follows Theme settings › Spacing &amp; layout.</td>
+</tr>
+<tr>
+<td>Animation</td>
+<td>Most sections</td>
+<td>Entrance animation or the global default. Visitors who prefer reduced motion never see animation.</td>
+</tr>
+<tr>
+<td>Device visibility</td>
+<td>Every section and block</td>
+<td>Show on desktop (990px+), tablet (750–989px) and mobile (under 750px). Hidden items leave no gap.</td>
+</tr>
+<tr>
+<td>Scheduling</td>
+<td>Sections, Group block</td>
+<td>Start and end date/time (store time zone). <em>Preview in editor</em> shows scheduled items while editing.</td>
+</tr>
+<tr>
+<td>Conditions</td>
+<td>Sections, Group block</td>
+<td>Only for logged-in or guest customers, chosen countries, cart value above an amount, products with tags, products in collections, products in stock / low stock / sold out / on sale / not on sale, or during / outside Campaign mode.</td>
+</tr>
+</tbody></table>
+<p>To give any block conditions, put it inside a <strong>Group</strong> block and set the conditions on the Group — e.g. a &quot;Low stock — order soon&quot; message that only shows on low-stock products, or a Christmas message between two dates.</p>
+<h2>Responsive layouts</h2>
+<p>Group blocks and Design sections have <strong>direction</strong> (column, row, grid, horizontal scroll), <strong>columns</strong>, <strong>alignment</strong>, <strong>gap</strong> and <strong>padding</strong> for desktop and mobile separately, plus background image, colour scheme, border and radius. Collection grids and product grids have columns for desktop, tablet and mobile. Preview each device with the icons at the top of the editor.</p>
+<h2>Dynamic sources and metafields</h2>
+<p>Many block settings show a <strong>dynamic source</strong> icon (a stack of discs). Click it to connect the setting to a product or collection field or <strong>metafield</strong> — the block then shows different content for every product.</p>
+<ol>
+<li>Create the metafield definition: <strong>Settings › Custom data › Products › Add definition</strong> (name, namespace and key, type).</li>
+<li>Fill it in on each product (bottom of the product page in admin).</li>
+<li>In the Theme Editor, open the block and connect the setting with the dynamic source icon.</li>
+</ol>
+<p>Metafields the theme uses out of the box:</p>
+<table>
+<thead>
+<tr>
+<th>Metafield</th>
+<th>Type</th>
+<th>Used by</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>custom.subtitle</code></td>
+<td>Single line text</td>
+<td>Subtitle block, product cards</td>
+</tr>
+<tr>
+<td><code>custom.badge</code></td>
+<td>Single line text</td>
+<td>Badge on cards and product page</td>
+</tr>
+<tr>
+<td><code>custom.size_guide</code></td>
+<td>Page</td>
+<td>Size guide block and accordion</td>
+</tr>
+<tr>
+<td><code>custom.care_instructions</code></td>
+<td>Rich text</td>
+<td>Materials &amp; care accordion</td>
+</tr>
+<tr>
+<td><code>custom.faq</code></td>
+<td>Rich text</td>
+<td>FAQ accordion or tab</td>
+</tr>
+<tr>
+<td><code>custom.details</code></td>
+<td>Rich text</td>
+<td>Details accordion</td>
+</tr>
+<tr>
+<td><code>custom.siblings</code></td>
+<td>Product list</td>
+<td>Sibling products (connect with dynamic source)</td>
+</tr>
+<tr>
+<td><code>custom.sibling_label</code> / <code>custom.sibling_color</code></td>
+<td>Text / Colour</td>
+<td>Sibling names and swatches</td>
+</tr>
+<tr>
+<td><code>custom.complete_the_look</code></td>
+<td>Product list</td>
+<td>Complete the look (connect with dynamic source)</td>
+</tr>
+<tr>
+<td><code>reviews.rating</code> / <code>reviews.rating_count</code></td>
+<td>Rating / Integer</td>
+<td>Stars — written by review apps</td>
+</tr>
+<tr>
+<td><code>reviews.rating_breakdown</code></td>
+<td>JSON</td>
+<td>Rating breakdown bars — if your reviews app or Shopify Flow writes it</td>
+</tr>
+</tbody></table>
+<h2>Global settings (Theme settings)</h2>
+<p>Brand · Style direction · Colours · Typography · Spacing &amp; layout · Buttons · Cards · Badges &amp; labels · Badge rules · Media &amp; forms · Icons · Animation · Header &amp; footer defaults · Cart · Search · Conversion toolkit (recently viewed) · Promotions &amp; merchandising · Campaign mode · Offer 1–6 · Social media · SEO &amp; structured data · Placeholder artwork · Preview / demo states · Theme health.</p>
+<p><strong>Preview / demo states</strong> lets you preview sale, sold-out and campaign states in the editor without changing products. <strong>Theme health</strong> shows editor-only warnings (e.g. low colour contrast, missing metafields) — customers never see it.</p>
+<h2>Templates</h2>
+<p>Use <em>Create template</em> in the page selector to make alternative templates (for products, collections or pages) and assign them in Shopify admin. Each template has its own sections and settings.</p>
+<h2>Tips</h2>
+<ul>
+<li>Save often; nothing is live until the theme is published.</li>
+<li>Use <em>Undo</em> (Ctrl/Cmd+Z) in the editor.</li>
+<li>Blocks with no content show nothing to customers — for example a Rating block on products without reviews.</li>
+</ul>
+</main></div></body></html>

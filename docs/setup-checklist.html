@@ -1,0 +1,171 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Setup checklist — Tillhouse documentation</title><link rel="icon" href="../assets/tillhouse-favicon-32.png">
+<style>
+:root { --ink:#151412; --paper:#F4EFE6; --red:#D9432B; --stone:#E4DCCD; --muted:#5E5850; --line:rgba(21,20,18,.14); }
+* { box-sizing:border-box; } [hidden] { display:none !important; }
+a { color:inherit; } .layout > * { min-width:0; } main { overflow-wrap:anywhere; } main img { max-width:100%; }
+body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 Inter, system-ui, sans-serif; }
+@font-face { font-family: Archivo; src: url(../assets/Archivo-Variable.ttf); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: Inter; src: url(../assets/Inter-Variable.ttf); font-weight: 100 900; }
+.top { display:flex; align-items:center; justify-content:space-between; gap:16px; width:min(1100px,100% - 32px); margin:0 auto; padding:18px 0; }
+.top img { height:30px; width:auto; display:block; }
+.top nav { display:flex; gap:18px; font-weight:600; font-size:15px; } .top nav a { text-decoration:none; }
+.layout { display:grid; grid-template-columns:230px minmax(0,1fr); gap:48px; width:min(1100px,100% - 32px); margin:0 auto; padding:24px 0 72px; }
+.side { position:sticky; top:16px; align-self:start; font-size:15px; } .side ul { list-style:none; margin:0; padding:0; display:grid; gap:4px; }
+.side a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; } .side a[aria-current] { background:var(--stone); font-weight:700; }
+main h1 { font:800 clamp(32px,4.4vw,52px)/1 Archivo, sans-serif; font-stretch:125%; letter-spacing:-.03em; margin:0 0 24px; }
+main h2 { font:800 26px/1.15 Archivo, sans-serif; font-stretch:112%; margin:40px 0 12px; } main h3 { font-size:19px; margin:28px 0 8px; }
+main a { color:inherit; } main code { background:#fff; padding:1px 6px; border-radius:5px; font-size:.92em; }
+main table { width:100%; border-collapse:collapse; font-size:15px; margin:16px 0; display:block; overflow-x:auto; }
+main th, main td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+main blockquote { margin:16px 0; padding:12px 16px; background:#fff; border-left:3px solid var(--red); border-radius:6px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; list-style:none; padding:0; }
+.cards a { display:block; height:100%; background:#fff; border-radius:12px; padding:16px 18px; text-decoration:none; box-shadow:0 0 0 1px var(--line); font-weight:700; }
+form { display:grid; gap:16px; max-width:640px; background:#fff; padding:24px; border-radius:14px; box-shadow:0 0 0 1px var(--line); }
+.row { display:grid; grid-template-columns:1fr 1fr; gap:16px; } label { display:grid; gap:6px; min-width:0; font-weight:600; font-size:15px; }
+input, textarea { width:100%; min-width:0; font:inherit; padding:10px 12px; border:1px solid #bdb5a8; border-radius:8px; background:#fff; }
+input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visible { outline:3px solid var(--red); outline-offset:2px; }
+small { color:var(--muted); font-weight:400; }
+button { font:700 16px Inter, sans-serif; min-height:48px; padding:0 22px; border:0; border-radius:999px; background:var(--ink); color:var(--paper); cursor:pointer; justify-self:start; }
+.note { background:var(--stone); border-radius:10px; padding:12px 14px; font-size:15px; }
+@media (max-width:820px) { .layout { grid-template-columns:1fr; gap:16px; } .side { position:static; } .side ul { display:flex; flex-wrap:wrap; } .row { grid-template-columns:1fr; } .top nav { display:none; } }
+</style></head><body>
+<header class="top"><a href="../index.html"><img src="../assets/tillhouse-lockup.svg" alt="Tillhouse"></a>
+<nav aria-label="Site"><a href="../docs/index.html">Docs</a><a href="../docs/faq.html">FAQ</a><a href="../support.html">Support</a></nav></header>
+<div class="layout"><nav class="side" aria-label="Documentation"><ul>
+    <li><a href="../docs/index.html">All guides</a></li>
+    <li><a href="../docs/quick-start.html">Quick start</a></li><li><a href="../docs/setup-checklist.html" aria-current="page">Setup checklist</a></li><li><a href="../docs/styles.html">Styles</a></li><li><a href="../docs/theme-guide.html">Complete theme guide</a></li><li><a href="../docs/theme-editor.html">Theme editor</a></li><li><a href="../docs/product-page.html">Product page</a></li><li><a href="../docs/design-system.html">Design system</a></li><li><a href="../docs/promotions.html">Promotions</a></li><li><a href="../docs/bundle-builder.html">Bundle builder</a></li><li><a href="../docs/trade-portal.html">Trade portal</a></li><li><a href="../docs/features.html">Feature list</a></li><li><a href="../docs/troubleshooting.html">Troubleshooting</a></li><li><a href="../docs/release-notes.html">Release notes</a></li>
+    <li><a href="../docs/faq.html">FAQ</a></li>
+    <li><a href="../support.html">Support</a></li></ul></nav><main><h1>Setup Checklist</h1>
+<p>Work through this list before publishing Tillhouse. Tick items as you go.</p>
+<h2>Shopify settings</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Settings › Store details</strong>: store name, contact email, address, currency.</li>
+<li><input disabled="" type="checkbox"> <strong>Settings › Users and permissions</strong>: staff accounts set up.</li>
+<li><input disabled="" type="checkbox"> <strong>Settings › Customer accounts</strong>: choose new or classic accounts, or off.</li>
+<li><input disabled="" type="checkbox"> <strong>Settings › Markets</strong>: countries, currencies and languages you sell in.</li>
+</ul>
+<h2>Branding</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Theme settings › <strong>Brand</strong>: logo, light logo (for dark or transparent headers), logo width, favicon.</li>
+<li><input disabled="" type="checkbox"> Theme settings › <strong>Style direction</strong>, <strong>Colours</strong>, <strong>Typography</strong>, <strong>Buttons</strong>, <strong>Cards</strong> reviewed.</li>
+<li><input disabled="" type="checkbox"> Theme settings › <strong>Social media</strong> profile links.</li>
+<li><input disabled="" type="checkbox"> Theme settings › <strong>SEO &amp; structured data</strong>: social sharing image.</li>
+</ul>
+<h2>Domain</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Settings › Domains</strong>: domain connected, set as primary, SSL active.</li>
+</ul>
+<h2>Navigation</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Online Store › Navigation</strong>: main menu (up to three levels) and footer menus.</li>
+<li><input disabled="" type="checkbox"> Header: layout, menu, highlighted item, icons, sticky behaviour.</li>
+<li><input disabled="" type="checkbox"> Mega menus added for the top-level items that need them (names match exactly).</li>
+<li><input disabled="" type="checkbox"> Menu checked on a phone (menu drawer).</li>
+</ul>
+<h2>Collections</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Collections created with images and descriptions.</li>
+<li><input disabled="" type="checkbox"> <strong>Shopify Search &amp; Discovery</strong> installed; filters added (price, availability, colour, size…).</li>
+<li><input disabled="" type="checkbox"> Collection templates chosen; editorial tiles added where useful.</li>
+</ul>
+<h2>Products</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Titles, descriptions, prices; compare-at prices only where genuinely reduced.</li>
+<li><input disabled="" type="checkbox"> At least two images per product (the second is the card hover image), with alt text.</li>
+<li><input disabled="" type="checkbox"> Variants and colour swatches (category metafield swatches) set.</li>
+<li><input disabled="" type="checkbox"> Inventory tracking on (needed for stock and low-stock messages).</li>
+<li><input disabled="" type="checkbox"> Tags for badges (<code>new</code>, <code>bestseller</code>, <code>trending</code>, <code>staff-pick</code>, <code>badge:Your text</code>).</li>
+<li><input disabled="" type="checkbox"> Metafield definitions created and filled for the blocks you use (subtitle, size guide, FAQ, siblings, Complete the look).</li>
+</ul>
+<h2>Product templates</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Default product template arranged; alternative templates (editorial, minimal, sale) assigned where wanted.</li>
+<li><input disabled="" type="checkbox"> Reviews app installed, its block added to Product reviews.</li>
+<li><input disabled="" type="checkbox"> Sample text in accordions, storytelling and trust blocks replaced or removed.</li>
+</ul>
+<h2>Payments</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Settings › Payments</strong>: Shopify Payments or a provider activated; wallets (Shop Pay, Apple Pay, Google Pay) on.</li>
+<li><input disabled="" type="checkbox"> Test order placed in test mode, then test mode turned off.</li>
+</ul>
+<h2>Shipping</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Settings › Shipping and delivery</strong>: zones, rates, free-shipping threshold, local pickup if offered.</li>
+<li><input disabled="" type="checkbox"> Delivery estimate block values match your real delivery times.</li>
+</ul>
+<h2>Taxes</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Settings › Taxes and duties</strong> configured for your markets; <em>Taxes included</em> note matches.</li>
+</ul>
+<h2>Policies</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Settings › Policies</strong>: refund, privacy, terms of service, shipping, contact information.</li>
+<li><input disabled="" type="checkbox"> Footer links to policies.</li>
+</ul>
+<h2>Search</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Theme settings › <strong>Search</strong>: presentation, popular searches (your own terms), quick-links menu, featured collection.</li>
+<li><input disabled="" type="checkbox"> Searched for a few products on desktop and phone.</li>
+</ul>
+<h2>Cart</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Theme settings › <strong>Cart</strong>: drawer or page, order notes.</li>
+<li><input disabled="" type="checkbox"> Cart blocks: progress bar, upsells, discount code, gift options as needed.</li>
+</ul>
+<h2>Discounts and promotions</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Every enabled offer (Theme settings › Offer 1–6) has a matching discount in <strong>Shopify admin › Discounts</strong> and <em>Discount exists in Shopify admin</em> ticked.</li>
+<li><input disabled="" type="checkbox"> Offer eligibility, tiers and dates match the discount; each tested at checkout.</li>
+<li><input disabled="" type="checkbox"> Free shipping / free gift thresholds confirmed only after setting them up in Shopify.</li>
+<li><input disabled="" type="checkbox"> Campaign mode off, or scheduled and linked to a live offer.</li>
+</ul>
+<h2>Mobile</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Preview on an iPhone (Safari) and an Android phone (Chrome): header, menu, search, product page, cart drawer, checkout.</li>
+<li><input disabled="" type="checkbox"> Blocks hidden or shown per device where needed.</li>
+</ul>
+<h2>Testing</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Add to cart, quick add, quick view, variant changes, quantity, discount code and checkout tested end to end.</li>
+<li><input disabled="" type="checkbox"> Contact form and newsletter sign-up tested.</li>
+<li><input disabled="" type="checkbox"> Theme health (editor) warnings resolved.</li>
+<li><input disabled="" type="checkbox"> No placeholder artwork or sample text left (or placeholder artwork turned off).</li>
+</ul>
+<h2>Analytics</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Settings › Customer privacy</strong> (cookie banner) configured.</li>
+<li><input disabled="" type="checkbox"> Google &amp; YouTube, Meta or other sales-channel apps connected; Shopify Analytics reviewed.</li>
+</ul>
+<h2>SEO</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Online Store › Preferences</strong>: homepage title and meta description.</li>
+<li><input disabled="" type="checkbox"> Product and collection SEO titles/descriptions; image alt text.</li>
+<li><input disabled="" type="checkbox"> Redirects for any old URLs (<strong>Online Store › Navigation › URL redirects</strong>).</li>
+</ul>
+<h2>Optional modules</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Bundle builder:</strong><ul>
+<li><input disabled="" type="checkbox"> Create the Bundle tier and Bundle group definitions.</li>
+<li><input disabled="" type="checkbox"> Add a page with the <strong>build-a-bundle</strong> template.</li>
+<li><input disabled="" type="checkbox"> Create one automatic discount per tier.</li>
+<li><input disabled="" type="checkbox"> Test every tier at checkout (Bundle Builder Guide).</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>Trade portal:</strong><ul>
+<li><input disabled="" type="checkbox"> Turn on Shopify B2B and create a catalog.</li>
+<li><input disabled="" type="checkbox"> Create the Wholesale program entry.</li>
+<li><input disabled="" type="checkbox"> Add the <strong>wholesale</strong> and <strong>wholesale-order</strong> pages.</li>
+<li><input disabled="" type="checkbox"> Restrict retail discounts to retail markets.</li>
+<li><input disabled="" type="checkbox"> Test a B2B checkout (Trade Portal Guide).</li>
+</ul>
+</li>
+</ul>
+<h2>Launch</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Theme backed up: <strong>Online Store › Themes › … › Download theme file</strong>.</li>
+<li><input disabled="" type="checkbox"> Theme <strong>published</strong>.</li>
+<li><input disabled="" type="checkbox"> Store password removed (<strong>Online Store › Preferences</strong>).</li>
+<li><input disabled="" type="checkbox"> Test order placed on the live store and refunded.</li>
+</ul>
+</main></div></body></html>

@@ -1,0 +1,193 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Promotions — Tillhouse documentation</title><link rel="icon" href="../assets/tillhouse-favicon-32.png">
+<style>
+:root { --ink:#151412; --paper:#F4EFE6; --red:#D9432B; --stone:#E4DCCD; --muted:#5E5850; --line:rgba(21,20,18,.14); }
+* { box-sizing:border-box; } [hidden] { display:none !important; }
+a { color:inherit; } .layout > * { min-width:0; } main { overflow-wrap:anywhere; } main img { max-width:100%; }
+body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 Inter, system-ui, sans-serif; }
+@font-face { font-family: Archivo; src: url(../assets/Archivo-Variable.ttf); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: Inter; src: url(../assets/Inter-Variable.ttf); font-weight: 100 900; }
+.top { display:flex; align-items:center; justify-content:space-between; gap:16px; width:min(1100px,100% - 32px); margin:0 auto; padding:18px 0; }
+.top img { height:30px; width:auto; display:block; }
+.top nav { display:flex; gap:18px; font-weight:600; font-size:15px; } .top nav a { text-decoration:none; }
+.layout { display:grid; grid-template-columns:230px minmax(0,1fr); gap:48px; width:min(1100px,100% - 32px); margin:0 auto; padding:24px 0 72px; }
+.side { position:sticky; top:16px; align-self:start; font-size:15px; } .side ul { list-style:none; margin:0; padding:0; display:grid; gap:4px; }
+.side a { display:block; padding:6px 10px; border-radius:8px; text-decoration:none; } .side a[aria-current] { background:var(--stone); font-weight:700; }
+main h1 { font:800 clamp(32px,4.4vw,52px)/1 Archivo, sans-serif; font-stretch:125%; letter-spacing:-.03em; margin:0 0 24px; }
+main h2 { font:800 26px/1.15 Archivo, sans-serif; font-stretch:112%; margin:40px 0 12px; } main h3 { font-size:19px; margin:28px 0 8px; }
+main a { color:inherit; } main code { background:#fff; padding:1px 6px; border-radius:5px; font-size:.92em; }
+main table { width:100%; border-collapse:collapse; font-size:15px; margin:16px 0; display:block; overflow-x:auto; }
+main th, main td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+main blockquote { margin:16px 0; padding:12px 16px; background:#fff; border-left:3px solid var(--red); border-radius:6px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; list-style:none; padding:0; }
+.cards a { display:block; height:100%; background:#fff; border-radius:12px; padding:16px 18px; text-decoration:none; box-shadow:0 0 0 1px var(--line); font-weight:700; }
+form { display:grid; gap:16px; max-width:640px; background:#fff; padding:24px; border-radius:14px; box-shadow:0 0 0 1px var(--line); }
+.row { display:grid; grid-template-columns:1fr 1fr; gap:16px; } label { display:grid; gap:6px; min-width:0; font-weight:600; font-size:15px; }
+input, textarea { width:100%; min-width:0; font:inherit; padding:10px 12px; border:1px solid #bdb5a8; border-radius:8px; background:#fff; }
+input:focus-visible, textarea:focus-visible, a:focus-visible, button:focus-visible { outline:3px solid var(--red); outline-offset:2px; }
+small { color:var(--muted); font-weight:400; }
+button { font:700 16px Inter, sans-serif; min-height:48px; padding:0 22px; border:0; border-radius:999px; background:var(--ink); color:var(--paper); cursor:pointer; justify-self:start; }
+.note { background:var(--stone); border-radius:10px; padding:12px 14px; font-size:15px; }
+@media (max-width:820px) { .layout { grid-template-columns:1fr; gap:16px; } .side { position:static; } .side ul { display:flex; flex-wrap:wrap; } .row { grid-template-columns:1fr; } .top nav { display:none; } }
+</style></head><body>
+<header class="top"><a href="../index.html"><img src="../assets/tillhouse-lockup.svg" alt="Tillhouse"></a>
+<nav aria-label="Site"><a href="../docs/index.html">Docs</a><a href="../docs/faq.html">FAQ</a><a href="../support.html">Support</a></nav></header>
+<div class="layout"><nav class="side" aria-label="Documentation"><ul>
+    <li><a href="../docs/index.html">All guides</a></li>
+    <li><a href="../docs/quick-start.html">Quick start</a></li><li><a href="../docs/setup-checklist.html">Setup checklist</a></li><li><a href="../docs/styles.html">Styles</a></li><li><a href="../docs/theme-guide.html">Complete theme guide</a></li><li><a href="../docs/theme-editor.html">Theme editor</a></li><li><a href="../docs/product-page.html">Product page</a></li><li><a href="../docs/design-system.html">Design system</a></li><li><a href="../docs/promotions.html" aria-current="page">Promotions</a></li><li><a href="../docs/bundle-builder.html">Bundle builder</a></li><li><a href="../docs/trade-portal.html">Trade portal</a></li><li><a href="../docs/features.html">Feature list</a></li><li><a href="../docs/troubleshooting.html">Troubleshooting</a></li><li><a href="../docs/release-notes.html">Release notes</a></li>
+    <li><a href="../docs/faq.html">FAQ</a></li>
+    <li><a href="../support.html">Support</a></li></ul></nav><main><h1>Promotions Guide</h1>
+<h2>The rule: the theme presents, Shopify discounts</h2>
+<table>
+<thead>
+<tr>
+<th>The theme (Theme Editor)</th>
+<th>Shopify (admin)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Badges, banners, announcements, product-page offer panels, multi-buy tables, cart progress bars and reminders, campaign bar</td>
+<td>The price change itself: <strong>Discounts</strong> (automatic or code), free shipping (<strong>Settings › Shipping and delivery</strong>), gift products</td>
+</tr>
+</tbody></table>
+<p>Every offer, the free-shipping threshold and the free-gift threshold has a confirmation box. <strong>Until it is ticked, customers see nothing.</strong> In the Theme Editor unconfirmed items appear with a dashed outline and “Preview – not live” (switch previews off in <em>Promotions &amp; merchandising</em>). Offers hide automatically outside their start/end dates and only appear on products that match their eligibility.</p>
+<h2>Theme settings</h2>
+<p><strong>Promotions &amp; merchandising</strong> — free shipping threshold + <em>set up in Shopify shipping settings</em> confirmation; free gift threshold, description + confirmation; editor preview switch.</p>
+<p><strong>Offer 1 – Offer 6</strong> — each offer has:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Enable offer / <strong>Discount exists in Shopify admin</strong></td>
+<td>Both required for customers to see it.</td>
+</tr>
+<tr>
+<td>Offer type</td>
+<td>BOGO, Buy X get Y, buy more save % (tiers), multi-buy price (3 for £40), spend £X get % off, spend £X get £ off, spend £X free shipping, free gift, sale / campaign, custom.</td>
+</tr>
+<tr>
+<td>Badge label, headline, details</td>
+<td>Badge on cards; headline/details for panels, banners and the multi-buy block.</td>
+</tr>
+<tr>
+<td>Tiers</td>
+<td><code>quantity or spend = reward</code>, separated by semicolons: <code>2=15% off; 3=20% off; 5=25% off</code> · <code>3=£40 in total</code> · <code>2=Second item 50% off</code> · <code>150=10% off; 250=15% off</code>.</td>
+</tr>
+<tr>
+<td>Spend threshold</td>
+<td>For spend, free shipping and free gift offers; drives cart progress.</td>
+</tr>
+<tr>
+<td>Discount code</td>
+<td>Optional; shown when the discount needs a code.</td>
+</tr>
+<tr>
+<td>Applies to</td>
+<td>All products, a collection, specific products, or a product tag — keep in step with the discount&#39;s eligibility.</td>
+</tr>
+<tr>
+<td>Starts / Ends</td>
+<td>Optional (store time zone). <em>Ends</em> adds countdowns and hides the offer afterwards.</td>
+</tr>
+<tr>
+<td>Display</td>
+<td>Badge on cards, panel on product pages, reminder in the cart, badge style, link.</td>
+</tr>
+</tbody></table>
+<p><strong>Badges &amp; labels</strong> — position, maximum per card, shape; Sale (text, % off, amount off), Sold out, New (days or tag), Low stock, Best seller, Limited, Exclusive, Online only (by tag), two collection badges, metafield badge (<code>custom.badge</code>), custom <code>badge:</code> tags, campaign badge; a style for each.</p>
+<h2>Components</h2>
+<p>Every component below reads the same Offers 1–6, so an offer is set up once and shown wherever you place it.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Where to add it</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Promotional banner</td>
+<td>Add section › <em>Promotional banner</em>: full image, split, boxed or slim bar; mobile image; background colour; countdown; scheduling; link to an offer to reuse its copy and hide when not live.</td>
+</tr>
+<tr>
+<td>Offer announcement</td>
+<td>Header › Announcement bar › Add block › <em>Offer announcement</em>.</td>
+</tr>
+<tr>
+<td>Promotion tiles</td>
+<td>Add section › <em>Promotion tiles</em>; each tile can link to an offer and stays hidden until it is live.</td>
+</tr>
+<tr>
+<td>Offers panel</td>
+<td>Product information › <em>Offers</em> (optional tiers, hide one offer).</td>
+</tr>
+<tr>
+<td>Multi-buy offer</td>
+<td>Product information › <em>Multi-buy offer</em> — tiers from an offer or manual tiers (with their own confirmation); tapping a quantity tier sets the quantity.</td>
+</tr>
+<tr>
+<td>Promotional badge</td>
+<td>Product information › <em>Promotional badge</em> — type, custom text, colour, size, icon, alignment, <em>only when the condition is met</em>.</td>
+</tr>
+<tr>
+<td>Promotion</td>
+<td>Any block area (product information, Design section, Hero, Group) › <em>Add block › Promotion</em>: an offer (Panel, Minimal, Outlined or Banner; tiers as cards, list or pills) or <strong>a message only</strong>.</td>
+</tr>
+<tr>
+<td>Offer tile</td>
+<td>Collection grid › <em>Add block › Offer tile</em>: an offer between products; offers limited to one collection only show there.</td>
+</tr>
+<tr>
+<td>Cart progress / reminders</td>
+<td>Cart drawer or Cart page › <em>Progress bar</em>, <em>Offer reminders</em>, <em>Promotion message</em>.</td>
+</tr>
+</tbody></table>
+<h2>Campaign Mode</h2>
+<p><em>Theme settings › Campaign mode</em> switches the whole store into a seasonal campaign on a schedule:</p>
+<ul>
+<li><strong>Campaign bar</strong> above the header: text, link, countdown to the end date, colour scheme.</li>
+<li><strong>Colour overrides</strong>: accent and sale colours while the campaign is live.</li>
+<li><strong>Campaign badge</strong> on products in a chosen collection.</li>
+<li><strong>Section conditions</strong>: any section&#39;s <em>Conditions › Campaign</em> can be set to show <em>during</em> or <em>outside</em> the campaign — e.g. a sale slideshow during, the regular slideshow outside.</li>
+</ul>
+<p>The campaign is live when it is enabled and inside its start/end dates. Set <strong>Only while this offer is live</strong> to tie it to an offer: then an unconfirmed, disabled or expired offer keeps the entire campaign off. If you run a campaign without linking an offer, make sure its text only describes discounts that exist in Shopify.</p>
+<p>Preview in the editor before the start date with <em>Theme settings › Preview / demo states › Campaign: active</em> (customers are unaffected).</p>
+<h2>Example: “Buy 2, save 15% on knitwear”</h2>
+<ol>
+<li><strong>Shopify admin › Discounts › Create discount › Amount off products</strong> — automatic, 15%, minimum quantity 2, applies to the <em>Knitwear</em> collection.</li>
+<li><strong>Theme settings › Offer 1</strong> — enable; type <em>Buy more, save % (tiers)</em>; label <code>Buy 2, save 15%</code>; tiers <code>2=15% off</code>; applies to <em>A collection › Knitwear</em>; tick <strong>Discount exists in Shopify admin</strong>.</li>
+<li>Optional — product page <em>Multi-buy offer</em> block (Offer 1); home page <em>Promotional banner</em> linked to Offer 1; <em>Offer announcement</em> in the announcement bar.</li>
+</ol>
+<h2>Example: Black Friday campaign</h2>
+<ol>
+<li>Create the discount(s) in Shopify admin and confirm the matching offer (e.g. Offer 6, type <em>Sale / campaign</em>, with an end date).</li>
+<li><em>Campaign mode</em>: enable, name, start/end, <strong>Only while this offer is live → Offer 6</strong>, bar text and link, optional colour overrides, campaign collection and badge.</li>
+<li>Duplicate your slideshow; set the copy&#39;s <em>Conditions › Campaign</em> to <em>During</em> and the original&#39;s to <em>Outside</em>.</li>
+</ol>
+<h2>Example: BOGO — buy one, get one free</h2>
+<ol>
+<li><strong>Shopify admin › Discounts › Create discount › Buy X get Y</strong> — customer buys 1 item from the chosen products, gets 1 item at 100% off; automatic.</li>
+<li><strong>Theme settings › Offer 2</strong> — enable; type <em>Buy one, get one (BOGO)</em>; label <code>Buy one, get one free</code>; headline and details; <em>Applies to</em> the same products or collection; tick <strong>Discount exists in Shopify admin</strong>.</li>
+<li>Show it: <em>Promotion</em> block on the product page, <em>Offer tile</em> in the collection, <em>Offer announcement</em> in the announcement bar.</li>
+</ol>
+<h2>Example: Spend $50 save 10%, $100 save 15%, $150 save 20%</h2>
+<ol>
+<li>In <strong>Shopify admin › Discounts</strong>, create three automatic <em>Amount off order</em> discounts: 10% with minimum purchase $50, 15% with minimum $100, 20% with minimum $150 (Shopify applies the best one).</li>
+<li><strong>Theme settings › Offer 3</strong> — type <em>Spend £X, get % off</em>; tiers <code>50=10% off; 100=15% off; 150=20% off</code>; spend threshold 50; tick <strong>Discount exists in Shopify admin</strong>.</li>
+<li>Add a cart <strong>Progress bar</strong> block (spend tiers) and, if you like, a <strong>Promotion</strong> block with tiers as cards.</li>
+</ol>
+<h2>Promotional messaging without a discount</h2>
+<p>Use the <strong>Promotion</strong> block&#39;s <em>A message only</em> option, the announcement bar, or any text block for messages such as &quot;Complimentary alterations in store&quot;. The theme adds no discount wording and applies nothing — write only what is true.</p>
+<h2>How to avoid misleading promotions</h2>
+<ul>
+<li>Create the discount in Shopify <strong>first</strong>, then tick <em>Discount exists in Shopify admin</em>. Until then customers see nothing.</li>
+<li>Keep <strong>Applies to</strong>, dates and tiers exactly in step with the Shopify discount.</li>
+<li>Use <strong>end dates</strong>: offers disappear automatically when they end.</li>
+<li>Link Campaign mode to an offer (<em>Only while this offer is live</em>) so a campaign can&#39;t outlive its discount.</li>
+<li>Test at checkout (Shopify&#39;s test mode or a test order) before announcing an offer.</li>
+<li>Compare-at prices should be genuine previous prices; the Sale badge and savings are calculated from them.</li>
+</ul>
+</main></div></body></html>
