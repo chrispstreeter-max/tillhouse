@@ -52,8 +52,13 @@ button { font:700 16px Inter, sans-serif; min-height:48px; padding:0 22px; borde
 <p>Before editing theme code, always duplicate the theme (<strong>Online Store › Themes › … › Duplicate</strong>). For bigger customizations, consider hiring a Shopify Partner.</p>
 <p>Most answers are in the <a href="docs/index.html">documentation</a>, the <a href="docs/faq.html">FAQ</a> and <a href="docs/troubleshooting.html">Troubleshooting</a>.</p>
 <h2 id="contact">Contact support</h2>
-<form id="support-form" method="post" action="" enctype="multipart/form-data">
+<form id="support-form" method="post" action="https://formsubmit.co/hello@chrisps.co.uk" enctype="multipart/form-data">
   <input type="hidden" name="_subject" value="Tillhouse support request">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://chrispstreeter-max.github.io/tillhouse/support.html?sent=1#contact">
+  <input type="hidden" name="_autoresponse" value="Thanks for contacting Tillhouse support. We've received your message and will reply within two business days. Meanwhile, the documentation and FAQ are at https://chrispstreeter-max.github.io/tillhouse/docs/">
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <p class="note" id="form-sent" hidden role="status">Thanks, your message has been sent. Check your inbox for the confirmation; we'll reply within two business days.</p>
   <div class="row">
     <label for="first-name">First name<input id="first-name" name="first_name" autocomplete="given-name" required></label>
     <label for="last-name">Last name<input id="last-name" name="last_name" autocomplete="family-name" required></label>
@@ -62,7 +67,7 @@ button { font:700 16px Inter, sans-serif; min-height:48px; padding:0 22px; borde
   <label for="store-url">Store URL <small>For example http://www.storename.myshopify.com</small><input id="store-url" name="store_url" type="url" placeholder="http://www.storename.myshopify.com"></label>
   <label for="problem">Description of the problem<textarea id="problem" name="problem" rows="6" required></textarea></label>
   <label for="screenshot">Screenshot <small>Optional: an image that shows the problem</small><input id="screenshot" name="attachment" type="file" accept="image/*"></label>
-  <p class="note" id="form-offline" >The form is being connected. Until then, email <a href="mailto:hello@chrisps.co.uk?subject=Tillhouse%20support">hello@chrisps.co.uk</a> with the details above.</p>
-  <button type="submit" disabled>Send to support</button>
+  <p class="note" id="form-offline" hidden>The form is being connected. Until then, email <a href="mailto:hello@chrisps.co.uk?subject=Tillhouse%20support">hello@chrisps.co.uk</a> with the details above.</p>
+  <button type="submit">Send to support</button>
   <p><small>You'll get an automatic confirmation by email, then a reply within two business days.</small></p>
-</form></main></div></body></html>
+</form><script>if (new URLSearchParams(location.search).has('sent')) document.getElementById('form-sent').hidden = false;</script></main></div></body></html>
