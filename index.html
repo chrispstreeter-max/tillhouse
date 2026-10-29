@@ -7,7 +7,7 @@
 <meta name="description" content="Tillhouse is a Shopify theme with a built-in bundle builder and B2B trade portal, plus 8 complete store demos.">
 <link rel="icon" href="assets/tillhouse-favicon-32.png">
 <style>
-/* EDIT BEFORE PUBLISHING: the Theme Store link and the demo password live in the PAGE object at the bottom of this file. */
+/* The demo password lives in the PAGE object at the bottom of this file. */
 @font-face { font-family: Archivo; src: url(assets/Archivo-Variable.ttf); font-weight: 100 900; font-stretch: 62% 125%; }
 @font-face { font-family: Inter; src: url(assets/Inter-Variable.ttf); font-weight: 100 900; }
 :root { --ink: #151412; --paper: #F4EFE6; --red: #D9432B; --stone: #E4DCCD; --muted: #6B655C; --line: rgba(21,20,18,.12); }
@@ -83,7 +83,7 @@ footer img { height: 26px; width: auto; }
         <h1 class="display" style="margin-top:20px">One theme.<br>Retail <em>and</em> trade.</h1>
         <p>A Shopify theme with a bundle builder and a B2B trade portal built in, and 8 complete store demos to start from.</p>
         <div class="actions">
-          <a class="btn btn--red" data-link="store" data-store-label href="#get">Coming to the Shopify Theme Store</a>
+          <a class="btn btn--red" data-link="store" data-store-label href="#get">Buy at chrispsdesign.ca</a>
           <a class="btn" data-link="demo" href="#">Open the live demo</a>
         </div>
         <small data-demo-password-note>Demo password: <strong data-demo-password>set me</strong></small>
@@ -152,10 +152,10 @@ footer img { height: 26px; width: auto; }
 <section id="get">
   <div class="wrap">
     <h2 class="display center">Get <em>Tillhouse.</em></h2>
-    <p class="muted" style="text-align:center;max-width:52ch;margin:-16px auto 28px">Tillhouse is sold on the Shopify Theme Store. Try it in your own store before you buy, then publish it in one click. Shopify handles payment and updates.</p>
-    <div style="text-align:center"><a class="btn btn--red" data-link="store" data-store-label href="#get">Coming to the Shopify Theme Store</a></div>
+    <p class="muted" style="text-align:center;max-width:52ch;margin:-16px auto 28px">Tillhouse is sold at chrispsdesign.ca. Upload the theme to your store, set it up, then publish it in one click. Shopify handles payment and updates.</p>
+    <div style="text-align:center"><a class="btn btn--red" data-link="store" data-store-label href="#get">Buy at chrispsdesign.ca</a></div>
     <div class="included">
-      <div><strong>The theme</strong><br>Online Store 2.0, sections everywhere, installed from the Theme Store.</div>
+      <div><strong>The theme</strong><br>Online Store 2.0, sections everywhere, installed by uploading the .zip.</div>
       <div><strong>13 guides</strong><br>Quick start, setup checklist, bundle builder and trade portal guides, and more.</div>
       <div><strong>Demo content</strong><br>84 demo products with photography, plus a step-by-step module demo.</div>
       <div><strong>Support</strong><br>Help with setting up the theme and fixing theme bugs.</div>
@@ -169,8 +169,8 @@ footer img { height: 26px; width: auto; }
     <details><summary>Do I need any apps?</summary><p>No. The bundle builder uses Shopify's own automatic discounts, and the trade portal uses Shopify B2B. Both are built into the theme.</p></details>
     <details><summary>What does the trade portal need?</summary><p>Shopify B2B. On Basic, Grow and Advanced plans, trade prices are set per B2B market. Per-customer pricing needs Shopify Plus. The theme never stores or calculates a trade price; Shopify does.</p></details>
     <details><summary>Does bundle pricing work in every country?</summary><p>Bundles work in markets that sell at your store prices. Where a market changes the price (a price adjustment, price list or another currency), the builder tells shoppers bundle pricing isn't available in their region.</p></details>
-    <details><summary>Where do I buy it?</summary><p>On the Shopify Theme Store. You pay through Shopify, and you can try Tillhouse in your store before you buy.</p></details>
-    <details><summary>What support do I get?</summary><p>Email support covering setup questions and theme bugs. It doesn't cover third-party apps or custom code changes. Updates are released through the Shopify Theme Store.</p></details>
+    <details><summary>Where do I buy it?</summary><p>At <a href="https://chrispsdesign.ca/themes/">chrispsdesign.ca</a>, $300 per store. You download the .zip from your billing page and upload it to Shopify.</p></details>
+    <details><summary>What support do I get?</summary><p>Email support covering setup questions and theme bugs. It doesn't cover third-party apps or custom code changes. Updates are free new downloads from your chrispsdesign.ca billing page.</p></details>
     <details><summary>Are the demo photos included?</summary><p>Yes, as demo content under the Unsplash License, so your store looks complete while you build. Replace them with your own photography before launch.</p></details>
   </div>
 </section>
@@ -185,7 +185,7 @@ footer img { height: 26px; width: auto; }
 <script>
 /* EDIT BEFORE PUBLISHING ------------------------------------------------------------- */
 const PAGE = {
-  themeStoreUrl: '',                // the Tillhouse listing on themes.shopify.com, once it's approved
+  shopUrl: 'https://chrispsdesign.ca/themes/',
   demoUrl: 'https://counter-demo-hcueu0kp.myshopify.com',
   demoPassword: 'opeash',           // the storefront password, or '' to hide the password line (paid plan)
   support: 'support.html',
@@ -194,9 +194,7 @@ const PAGE = {
 const set = (sel, fn) => document.querySelectorAll(sel).forEach(fn);
 set('[data-link="demo"]', (a) => { a.href = PAGE.demoUrl; a.target = '_blank'; a.rel = 'noopener'; });
 set('[data-link="support"]', (a) => { a.href = PAGE.support; });
-// Until the listing is live, store buttons say "Coming to the Shopify Theme Store" and scroll to #get.
-if (PAGE.themeStoreUrl) set('[data-link="store"]', (a) => { a.href = PAGE.themeStoreUrl; a.target = '_blank'; a.rel = 'noopener'; });
-if (PAGE.themeStoreUrl) set('[data-store-label]', (a) => { a.textContent = 'Get it on the Shopify Theme Store'; });
+set('[data-link="store"]', (a) => { a.href = PAGE.shopUrl; });
 if (PAGE.demoPassword) set('[data-demo-password]', (el) => { el.textContent = PAGE.demoPassword; });
 else set('[data-demo-password-note]', (el) => { el.hidden = true; });
 </script>
